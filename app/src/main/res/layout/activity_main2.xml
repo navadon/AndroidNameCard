@@ -45,8 +45,9 @@
                 android:layout_alignParentRight="true"
                 android:layout_below="@id/TH"
                 android:layout_marginTop="70dp"
-                android:text="คุณนิวัฒน์  งามไส้"
-                android:textSize="25sp" />
+                android:text="MR. NIWAT NGAMSAI"
+                android:textSize="25sp"
+                android:textAppearance="@style/MyFont"/>
 
             <TextView
                 android:id="@+id/code"
@@ -56,8 +57,9 @@
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_toLeftOf="@+id/code1"
-                android:text="หมายเลขบัตรประชาชน :"
-                android:textSize="15sp" />
+                android:text="Identify Number Card :"
+                android:textSize="15sp"
+                android:textAppearance="@style/MyFont"/>
 
             <TextView
                 android:id="@+id/code1"
@@ -65,6 +67,7 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/name"
+                android:textAppearance="@style/MyFont"
                 android:layout_marginTop="20dp"
                 android:text="1-2345-678910-88-8"
                 android:textSize="15sp" />
@@ -76,7 +79,9 @@
                 android:layout_below="@+id/code"
                 android:layout_marginRight="10dp"
                 android:layout_marginTop="20dp"
-                android:text="เบอร์โทรติดต่อ :"
+                android:layout_toLeftOf="@id/tel1"
+                android:textAppearance="@style/MyFont"
+                android:text="Telephone :"
                 android:textSize="15sp" />
 
             <TextView
@@ -85,10 +90,11 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/code"
+                android:textAppearance="@style/MyFont"
                 android:layout_marginTop="20dp"
-
                 android:text="+66 81 2265894"
                 android:textSize="15sp" />
+
 
 
             <TextView
@@ -97,8 +103,9 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:layout_below="@+id/tel"
+                android:textAppearance="@style/MyFont"
                 android:layout_marginTop="20dp"
-                android:text="จังหวัดเชียงใหม่ ประเทศไทย 50200"
+                android:text="ChiangMai Thailand 50200"
                 android:textSize="15sp" />
 
             <ImageView

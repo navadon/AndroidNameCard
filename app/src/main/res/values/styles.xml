@@ -8,4 +8,9 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="MyFont">
+        <item name="fontPath">fonts/SanamDeklen_chaya.ttf</item>
+    </style>
+
+
 </resources>
