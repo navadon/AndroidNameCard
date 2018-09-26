@@ -1,18 +1,122 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    android:layout_height="match_parent">
+
+    <!-- First page - Logo company -->
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/p1"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:text="Front of Namecard"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textColor="black"/>
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/customborder">
+
+        <ImageView
+            android:id="@+id/img_logo"
+            android:layout_width="121dp"
+            android:layout_height="119dp"
+            android:layout_centerInParent="true"
+            app:srcCompat="@drawable/logo" />
+    </RelativeLayout>
+
+    <!-- Second page - Detail -->
+
+    <TextView
+        android:id="@+id/p2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Back of Namecard"
+        android:textAlignment="center"
+        android:layout_marginTop="5dp"
+        android:textColor="black"/>
+
+    <FrameLayout
+        android:layout_width="350dp"
+        android:layout_height="200dp"
+        android:layout_margin="15dp"
+        android:background="@drawable/bg">
+
+        <RelativeLayout
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:background="@drawable/customborder">
+
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="101dp"
+                android:layout_height="112dp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="23dp"
+                app:srcCompat="@drawable/pos" />
+
+            <LinearLayout
+                android:layout_width="158dp"
+                android:layout_height="133dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="23dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Name"
+                    android:textColor="black"
+                    tools:text="Kristen Campbell" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Phone"
+                    android:textColor="black"
+                    tools:text="012-345-6789" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Email"
+                    android:textColor="black"
+                    tools:text="k.campbell@abc.com" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="Address"
+                    android:textColor="black"
+                    tools:text="123 Huaykaew Rd. Muaeng, C.N. 50200" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </FrameLayout>
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Edit Namecard" />
+
+</LinearLayout>
