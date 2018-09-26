@@ -11,15 +11,15 @@ public class Main2Activity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
 
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main2);
-        if (savedInstanceState == null) // 1st time
-        {
-            this.overridePendingTransition(R.anim.blink,
-                    R.anim.blink);
-        } else // already created so reverse animation
-        {
-            onStartCount = 2;
-        }
+//        setContentView(R.layout.activity_main2);
+//        if (savedInstanceState == null) // 1st time
+//        {
+//            this.overridePendingTransition(R.anim.blink,
+//                    R.anim.blink);
+//        } else // already created so reverse animation
+//        {
+//            onStartCount = 2;
+//        }
     }
 
 
