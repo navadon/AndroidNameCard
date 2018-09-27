@@ -4,6 +4,66 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg3"
     tools:context=".Main2Activity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="20dp"
+        android:gravity="center"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="72dp"
+        tools:layout_editor_absoluteY="20dp"
+        tools:ignore="MissingConstraints">
+
+        <RelativeLayout
+            android:id="@+id/cardView"
+            android:layout_width="350dp"
+            android:layout_height="200dp"
+            android:layout_margin="15dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:background="@drawable/bg6"
+                android:padding="50dp" />
+
+
+
+            <TextView
+                android:id="@+id/fn_1"
+                android:layout_width="wrap_content"
+                android:layout_height="75dp"
+                android:layout_centerInParent="true"
+                android:padding="15dp"
+                android:text="NATNICHA SOMSAK"
+                android:textColor="@color/colorWhite"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="49dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="28dp"
+                android:text="\t\t\tPhone: 0801290104\nE-mail: bns-04@hotmail.com"
+                android:textSize="15sp"
+                tools:ignore="InvalidId" />
+
+
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/btn_click_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp" />
+        
+    </LinearLayout>
 
 </android.support.constraint.ConstraintLayout>

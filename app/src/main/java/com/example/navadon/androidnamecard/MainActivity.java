@@ -1,15 +1,18 @@
 package com.example.navadon.androidnamecard;
 
+
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.EditText;
-import android.widget.TextView;
+
+
+
 
 public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener onClickListener;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
         initOnClickListener();
         findViewById(R.id.btn_click).setOnClickListener(onClickListener);
 
+
+
     }
 
     // You don't have to bind any functions to "android:onClick" in layout XML file.
@@ -38,7 +43,6 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent( MainActivity.this,Main2Activity.class);
                         startActivity(intent);
                         break;
-
                 }
 
             }

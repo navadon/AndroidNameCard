@@ -17,5 +17,6 @@
     <color name="colorLightBrown">#D7CCC8</color>
     <color name="colorDarkBrown">#212121</color>
     <color name="colorWhite">#FFFFFF</color>
+    <color name="colorDarkerBrown">#3E2723</color>
     
 </resources>

@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:id="@+id/viewFlipper1"
     android:background="@drawable/bg2"
     tools:context=".MainActivity">
 
@@ -33,7 +34,7 @@
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:background="@drawable/cardpurple"
+             android:background="@drawable/card_purple"
              android:padding="15dp"
              android:layout_marginStart="20dp"
              android:layout_marginTop="20dp"
@@ -80,7 +81,6 @@
           android:layout_height="wrap_content"
           android:layout_margin="30dp"
           />
-
 
    </LinearLayout>
 
