@@ -6,60 +6,59 @@
     android:layout_height="match_parent"
     android:background="@drawable/bg2"
     tools:context=".MainActivity">
-<LinearLayout
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:gravity="center"
-    android:orientation="vertical"
-    >
 
-   <RelativeLayout
-       android:id="@+id/cardView"
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:background="@drawable/card"
-       android:alpha="0.8"
-       android:padding="20dp"
-       android:orientation="vertical"
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:gravity="center"
        android:layout_margin="20dp"
-       >
+       android:orientation="vertical">
+
+      <RelativeLayout
+          android:id="@+id/cardView"
+          android:layout_width="350dp"
+          android:layout_height="200dp"
+          android:layout_margin="20dp"
+          android:alpha="0.8"
+          android:background="@drawable/card"
+          android:orientation="vertical"
+          android:padding="20dp">
 
 
-      <TextView
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:background="@color/colorDarkPurple"
+             android:padding="10dp"
+             android:text="SUPITCHA\nSAWASDIWARAPA"
+             android:textColor="@color/colorWhite"
+             android:textSize="20sp"
+             android:textStyle="bold" />
+
+         <TextView
+             android:id="@+id/tel"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentEnd="true"
+             android:layout_alignParentBottom="true"
+             android:text="(+66)81-899-4821"
+             tools:ignore="InvalidId" />
+
+         <TextView
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_toBottom="@+id/tel"
+             android:text="spch.smmile@gmail.com" />
+
+      </RelativeLayout>
+
+      <Button
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="SUPITCHA\nSAWASDIWARAPA"
-          android:textSize="20sp"
-          android:textColor="@color/colorWhite"
-          android:textStyle="bold"
-          android:padding="10dp"
-          android:background="@color/colorDarkPurple"
-          />
-
-      <TextView
-          android:id="@+id/tel"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_alignParentEnd="true"
-          android:text="(+66)81-899-4821"
-          tools:ignore="InvalidId" />
-
-      <TextView
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:text="spch.smmile@gmail.com"
-          android:layout_toBottom="@+id/tel"/>
-
-   </RelativeLayout>
-
-   <Button
-       android:layout_width="wrap_content"
-       android:layout_height="wrap_content"
-       android:layout_margin="30dp"
-       />
+          android:layout_margin="30dp" />
 
 
-</LinearLayout>
+   </LinearLayout>
 
 
 </android.support.constraint.ConstraintLayout>
