@@ -18,18 +18,18 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/layout50dp"
             android:gravity="right"
             >
             <Button
                 android:id="@+id/TH"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
                 android:text="TH"
                 android:onClick="process"/>
             <Button
                 android:id="@+id/EN"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:enabled="false"
@@ -46,7 +46,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.4"
-                    android:padding="20dp"
+                    android:padding="@dimen/layout20dp"
                     android:onClick="imageClick"
                     android:src="@mipmap/profile"/>
                 <ImageView
@@ -68,11 +68,11 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentRight="true"
                         android:layout_below="@id/TH"
-                        android:layout_marginTop="60dp"
-                        android:text="MR. Niwat Sarapee"
+                        android:layout_marginTop="@dimen/layout60dp"
+                        android:text="@string/name_en"
                         android:textColor="@color/colorName"
                         android:textStyle="bold"
-                        android:textSize="25sp" />
+                        android:textSize="@dimen/font25sp" />
                     <RelativeLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent">
@@ -80,12 +80,12 @@
                             android:id="@+id/code"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
+                            android:layout_marginRight="@dimen/layout10dp"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:layout_marginTop="20dp"
-                            android:text="Identity Number Card :"
-                            android:textSize="15sp" />
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@string/id_en"
+                            android:textSize="@dimen/font15sp" />
                         <TextView
                             android:id="@+id/code1"
                             android:layout_width="wrap_content"
@@ -93,9 +93,9 @@
                             android:layout_toRightOf="@+id/code"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:layout_marginTop="20dp"
-                            android:text="1-2345-678910-88-8"
-                            android:textSize="15sp" />
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@string/id"
+                            android:textSize="@dimen/font15sp" />
                         <TextView
                             android:id="@+id/tel"
                             android:layout_width="wrap_content"
@@ -103,10 +103,10 @@
                             android:layout_below="@+id/code"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginTop="20dp"
-                            android:text="Telephone :"
-                            android:textSize="15sp" />
+                            android:layout_marginRight="@dimen/layout10dp"
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@string/tel_en"
+                            android:textSize="@dimen/font15sp" />
 
                         <TextView
                             android:id="@+id/tel1"
@@ -116,10 +116,10 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
                             android:layout_toRightOf="@+id/tel"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="@dimen/layout20dp"
 
-                            android:text="+66 81 2265894"
-                            android:textSize="15sp" />
+                            android:text="@string/tel"
+                            android:textSize="@dimen/font15sp" />
                         <TextView
                             android:id="@+id/add1"
                             android:layout_width="wrap_content"
@@ -127,9 +127,9 @@
                             android:layout_below="@+id/tel"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:layout_marginTop="20dp"
-                            android:text="ChiangMai Thailand 50200"
-                            android:textSize="15sp" />
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@string/addr_en"
+                            android:textSize="@dimen/font15sp" />
                     </RelativeLayout>
 
 
