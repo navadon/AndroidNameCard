@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/gray"
-    tools:context=".MainActivity">
+    android:background="@color/pink_bg"
+    tools:context=".MainActivity2">
 
 
     <ImageView
@@ -29,9 +29,8 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="153dp"
         android:gravity="center_horizontal"
-        android:background="@color/yellow"
+        android:background="@color/sky_blue_bg"
         android:orientation="vertical">
-
 
         <TextView
             android:id="@+id/textView2"
@@ -40,49 +39,51 @@
             android:text="@string/my_name"
             android:textAlignment="center"
             android:textSize="@dimen/text_size"
-            android:textColor="@color/blue_text"
-            android:textStyle="bold"
+            android:textColor="@color/red_text"
             />
 
         <TextView
             android:id="@+id/textView3"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-
-            android:layout_weight="1"
-            android:text="@string/my_mobile"
+            android:text="@string/age"
             android:textAlignment="center"
-            android:textSize="@dimen/text_size" />
+            android:textSize="@dimen/text_size"
+
+            />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+
             android:layout_weight="1"
-            android:text="@string/my_email"
+            android:text="@string/dob"
             android:textAlignment="center"
             android:textSize="@dimen/text_size" />
 
         <TextView
             android:id="@+id/textView5"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/my_fb"
+            android:text="@string/hobby"
             android:textAlignment="center"
             android:textSize="@dimen/text_size" />
+
+
 
 
     </LinearLayout>
 
     <Button
-        android:id="@+id/button_to_profile"
+        android:id="@+id/button_to_contact"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="64dp"
-        android:text="@string/to_profile"
+        android:text="@string/to_contact"
         android:onClick="process"
 
         />

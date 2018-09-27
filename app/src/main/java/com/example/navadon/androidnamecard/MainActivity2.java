@@ -7,15 +7,15 @@ import android.view.View;
 import android.widget.Button;
 
 
-public class MainActivity extends AppCompatActivity {
+public class MainActivity2 extends AppCompatActivity {
 
-    private Button btn_profile;
+    private Button btn_contact;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main2);
         bindView();
     }
 
@@ -23,14 +23,14 @@ public class MainActivity extends AppCompatActivity {
     private void bindView(){
 
 
-        btn_profile =  findViewById(R.id.button_to_profile);
+        btn_contact =  findViewById(R.id.button_to_contact);
 
     }
 
     // This "process" method MUST be bound in the layout XML file, "android:onClick="process""
     public void process(View v) {
-        if(v == btn_profile) {
-            Intent intent = new Intent(this,MainActivity2.class);
+        if(v == btn_contact) {
+            Intent intent = new Intent(this,MainActivity.class);
             startActivity(intent);
         }
 

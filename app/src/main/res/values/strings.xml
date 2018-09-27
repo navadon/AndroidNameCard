@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="my_name">Wiphob    Kaoian</string>
+    <string name="my_mobile">Mobile : 061  798  6601</string>
+    <string name="my_email">Email : wiphobkaoian@gmail.com</string>
+    <string name="my_fb">Facebook : Wiphob Kaoian</string>
+    <string name="mypicture">mypic</string>
+    <string name="to_profile">To Profile</string>
+    
+    
+    <string name="age">Age : 21</string>
+    <string name="dob">Date of Birth : 23 NOV 1996</string>
+    <string name="hobby">Hobby : Cooking , Playing games</string>
+    <string name="to_contact">To Contact</string>
+
 </resources>
