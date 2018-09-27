@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/viewFlipper1"
     android:background="@drawable/bg2"
     tools:context=".MainActivity">
 
@@ -12,14 +11,13 @@
        android:layout_width="match_parent"
        android:layout_height="match_parent"
        android:gravity="center"
-       android:layout_margin="20dp"
        android:orientation="vertical">
 
       <RelativeLayout
           android:id="@+id/cardView"
-          android:layout_width="350dp"
-          android:layout_height="200dp"
-          android:layout_margin="20dp"
+          android:layout_width="@dimen/widthCard"
+          android:layout_height="@dimen/heightCard"
+          android:layout_margin="@dimen/marginCardSmile"
           android:orientation="vertical"
           >
 
@@ -28,59 +26,29 @@
              android:layout_height="match_parent"
              android:alpha="0.5"
              android:background="@drawable/card"
-             android:padding="20dp"
+             android:padding="@dimen/paddingCardSmile"
+             />
+
+         <TextView
+             android:id="@+id/nameMe"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             style="@style/partNameSmile"
              />
 
          <TextView
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
-             android:background="@drawable/card_purple"
-             android:padding="15dp"
-             android:layout_marginStart="20dp"
-             android:layout_marginTop="20dp"
-             android:text="SUPITCHA\nSAWASDIWARAPA"
-             android:textColor="@color/colorWhite"
-             android:textSize="20sp"
-             android:textStyle="bold"
+             android:text="@string/telMailSmile"
+             style="@style/partContactSmile"
              />
-
-         <TextView
-             android:id="@+id/tel"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_margin="15dp"
-             android:layout_alignParentEnd="true"
-             android:layout_alignParentBottom="true"
-             android:text="(+66)81-899-4821\nspch.smmile@gmail.com"
-             android:textAlignment="textEnd"
-             tools:ignore="InvalidId"
-             android:textSize="15sp"
-
-
-             />
-
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:layout_margin="15dp"
-             android:layout_alignParentEnd="true"
-             android:layout_alignParentBottom="true"
-             android:text="spch.smmile@gmail.com"
-             tools:ignore="InvalidId"
-             android:textSize="15sp"
-
-
-             />
-
 
       </RelativeLayout>
 
       <Button
           android:id="@+id/btn_click"
-          android:layout_width="wrap_content"
-          android:layout_height="wrap_content"
-          android:layout_margin="20dp"
-          />
+          android:background="@drawable/button1"
+          style="@style/btn"/>
 
    </LinearLayout>
 

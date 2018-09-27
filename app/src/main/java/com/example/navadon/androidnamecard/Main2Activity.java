@@ -9,6 +9,10 @@ import android.widget.TextView;
 
 public class Main2Activity extends AppCompatActivity {
     private View.OnClickListener onClickListener;
+    private TextView fullName;
+    private int num = 0;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,13 +22,14 @@ public class Main2Activity extends AppCompatActivity {
         initView();
     }
     private void bindView(){
-
+        fullName = (TextView) findViewById(R.id.fn_1);
     }
 
 
     public void initView(){
         initOnClickListener();
         findViewById(R.id.btn_click_2).setOnClickListener(onClickListener);
+        findViewById(R.id.cardView_2).setOnClickListener(onClickListener);
 
     }
 
@@ -38,10 +43,24 @@ public class Main2Activity extends AppCompatActivity {
                         Intent intent = new Intent(Main2Activity.this, MainActivity.class);
                         startActivity(intent);
                         break;
+                    case R.id.cardView_2:
+                        changeName(num);
+                        num +=1;
 
                 }
 
             }
         };
     }
+
+    private  void changeName(int val){
+        if (val%2 != 0) {
+            fullName.setText(getString(R.string.nameBeam));
+        }
+        else {
+            fullName.setText("I'm BEAMMHEE. :)");
+        }
+
+    }
+
 }

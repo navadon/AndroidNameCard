@@ -8,7 +8,6 @@
     <color name="colorDarkPink"> #FF80AB</color>
     <color name="colorDarkGreen">#00838F</color>
     <color name="colorLightGreen">#80CBC4</color>
-    <color name="colorLightYellow">#FFF9C4</color>
     <color name="colorOrangePink">#FFAB91</color>
     <color name="colorGray"> #B0BEC5</color>
     <color name="colorSkyBlue">#B3E5FC</color>
@@ -18,5 +17,7 @@
     <color name="colorDarkBrown">#212121</color>
     <color name="colorWhite">#FFFFFF</color>
     <color name="colorDarkerBrown">#3E2723</color>
+    <color name="colorLightYellow">#FFF176</color>
+    <color name="colorLightPink">#EF9A9A</color>
     
 </resources>

@@ -5,13 +5,14 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-
-
+import android.widget.TextView;
 
 
 public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener onClickListener;
+    private TextView fullName;
+    private int num = 0;
 
 
     @Override
@@ -22,12 +23,13 @@ public class MainActivity extends AppCompatActivity {
         initView();
     }
     private void bindView(){
-
+        fullName = (TextView) findViewById(R.id.nameMe);
     }
 
     private void initView(){
         initOnClickListener();
         findViewById(R.id.btn_click).setOnClickListener(onClickListener);
+        findViewById(R.id.cardView).setOnClickListener(onClickListener);
 
 
 
@@ -43,10 +45,23 @@ public class MainActivity extends AppCompatActivity {
                         Intent intent = new Intent( MainActivity.this,Main2Activity.class);
                         startActivity(intent);
                         break;
+                    case R.id.cardView:
+                        changeName(num);
+                        num +=1;
+
                 }
 
             }
         };
+    }
+
+    private  void changeName(int val){
+        if (val%2 != 0) {
+            fullName.setText( getString(R.string.nameSmile));
+        }
+        else {
+            fullName.setText("SMILE :D");
+        }
     }
 
 
