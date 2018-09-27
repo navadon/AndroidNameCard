@@ -25,9 +25,16 @@ public class Main2Activity extends AppCompatActivity {
 
 
     }
-
-    public void THClick(View view) {
-        Intent intent = new Intent(Main2Activity.this,MainActivity.class);
+    public void process(View view){
+        if(view.getId() == R.id.TH ){
+            EnClick();
+        }
+    }
+    public void EnClick() {
+        Intent intent = new Intent(Main2Activity.this, MainActivity.class);
         startActivity(intent);
     }
+
+
+
 }
