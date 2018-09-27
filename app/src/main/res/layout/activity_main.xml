@@ -18,19 +18,37 @@
        android:layout_width="wrap_content"
        android:layout_height="wrap_content"
        android:background="@drawable/card"
-       android:alpha="0.6"
+       android:alpha="0.8"
        android:padding="20dp"
+       android:orientation="vertical"
+       android:layout_margin="20dp"
        >
 
 
       <TextView
           android:layout_width="wrap_content"
           android:layout_height="wrap_content"
-          android:text="@string/nameSmile"
+          android:text="SUPITCHA\nSAWASDIWARAPA"
           android:textSize="20sp"
-          android:textColor="@color/colorDarkGreen"
+          android:textColor="@color/colorWhite"
           android:textStyle="bold"
+          android:padding="10dp"
+          android:background="@color/colorDarkPurple"
           />
+
+      <TextView
+          android:id="@+id/tel"
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:layout_alignParentEnd="true"
+          android:text="(+66)81-899-4821"
+          tools:ignore="InvalidId" />
+
+      <TextView
+          android:layout_width="wrap_content"
+          android:layout_height="wrap_content"
+          android:text="spch.smmile@gmail.com"
+          android:layout_toBottom="@+id/tel"/>
 
    </RelativeLayout>
 
