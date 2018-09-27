@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Android Name Card</string>
-    <string name="one">1</string>
-    <string name="two">1</string>
     <string name="greeting">Hello, </string>
+    <string name="nameSmile">SUPITCHA</string>
+    <string name="surNameSmile">SAWASDIWARAPA</string>
+    <string name="stuID">580610684</string>
+
 </resources>
