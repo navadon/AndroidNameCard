@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="high100">100dp</dimen>
+    <dimen name="high300">300dp</dimen>
+    <dimen name="high20">20dp</dimen>
+    <dimen name="text24">24sp</dimen>
+    <dimen name="text20">20sp</dimen>
+    <dimen name="high10">10dp</dimen>
+    <dimen name="high250">250dp</dimen>
+    <dimen name="high200">200dp</dimen>
+</resources>

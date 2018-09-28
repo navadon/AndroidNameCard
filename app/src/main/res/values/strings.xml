@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="nattawut_khamchai">Nattawut Khamchai (AOF)</string>
+    <string name="studentID">580610641</string>
+    <string name="email">E-mail : nattawut.khamchai@gmail.com</string>
+    <string name="cpe24">CPE #24</string>
+    <string name="tel">Tel: 085 547 5456</string>
 </resources>
