@@ -73,7 +73,7 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/textView"
+                    android:id="@+id/name"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -82,7 +82,7 @@
                     tools:text="Kristen Campbell" />
 
                 <TextView
-                    android:id="@+id/textView2"
+                    android:id="@+id/phone_number"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -91,7 +91,7 @@
                     tools:text="012-345-6789" />
 
                 <TextView
-                    android:id="@+id/textView3"
+                    android:id="@+id/email"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -100,7 +100,7 @@
                     tools:text="k.campbell@abc.com" />
 
                 <TextView
-                    android:id="@+id/textView4"
+                    android:id="@+id/address"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="5dp"
@@ -114,7 +114,7 @@
     </FrameLayout>
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/edit_btn"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Edit Namecard" />
