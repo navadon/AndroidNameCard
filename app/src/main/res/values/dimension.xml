@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="nameSize">26dp</dimen>
+    <dimen name="jobSize">18dp</dimen>
+    <dimen name="infoSize">16dp</dimen>
+</resources>

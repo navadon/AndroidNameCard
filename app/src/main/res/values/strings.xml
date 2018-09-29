@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="firstname">Chaloempong</string>
+    <string name="lastname">Budkrajang</string>
+    <string name="email">chaloempongXX@gmail.com</string>
+    <string name="mobile">063-446XXXX</string>
+    <string name="website"><a href="https://www.commee.me">www.commee.me</a></string>
+    <string name="job_position">Web Developer / Android Developer</string>
+    <string name="click_information">Click here for more information</string>
+    <string name="click_main">Click here for back to main</string>
 </resources>
