@@ -37,8 +37,8 @@
 
     <TextView
         android:id="@+id/email"
-        android:layout_width="253dp"
-        android:layout_height="22dp"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
         android:text="@string/email"
         android:textColor="@color/color_White"
         android:textSize="@dimen/size_15"
@@ -51,8 +51,8 @@
 
     <TextView
         android:id="@+id/phone"
-        android:layout_width="146dp"
-        android:layout_height="21dp"
+        android:layout_width="wrap_content"
+        android:layout_height="16dp"
         android:text="@string/phone"
         android:textColor="@color/color_White"
         android:textSize="@dimen/size_15"
