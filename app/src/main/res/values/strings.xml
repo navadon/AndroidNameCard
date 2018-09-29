@@ -1,3 +1,8 @@
 <resources>
-    <string name="app_name">Android Name Card</string>
+    <string name="app_name">Name Card</string>
+    <string name="name">Kanokwan Pinthong</string>
+    <string name="idCode">580610615</string>
+    <string name="email">Email: Tenno_Warframe@gmail.com</string>
+    <string name="phone">Phone: 093-XXXXXXX</string>
+    <string name="btn_change">Change Information</string>
 </resources>
