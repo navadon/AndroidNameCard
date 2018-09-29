@@ -8,6 +8,7 @@
     android:background="@drawable/_6">
 
     <TextView
+        android:id="@+id/name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/name"
@@ -21,6 +22,7 @@
         app:layout_constraintVertical_bias="0.300" />
 
     <TextView
+        android:id="@+id/idCode"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/idCode"
@@ -34,8 +36,9 @@
         app:layout_constraintVertical_bias="0.450" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
+        android:id="@+id/email"
+        android:layout_width="253dp"
+        android:layout_height="22dp"
         android:text="@string/email"
         android:textColor="@color/color_White"
         android:textSize="@dimen/size_15"
@@ -47,8 +50,9 @@
         app:layout_constraintVertical_bias="0.550" />
 
     <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="16dp"
+        android:id="@+id/phone"
+        android:layout_width="146dp"
+        android:layout_height="21dp"
         android:text="@string/phone"
         android:textColor="@color/color_White"
         android:textSize="@dimen/size_15"
@@ -60,7 +64,7 @@
         app:layout_constraintVertical_bias="0.630" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btn_change"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
