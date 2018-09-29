@@ -1,9 +1,18 @@
 <resources>
     <string name="app_name">Android Name Card</string>
-    <string name="name">John</string>
-    <string name="surName">Doe</string>
-    <string name="email">john.doe@email.com</string>
-    <string name="position">Senior sleeper</string>
-    <string name="phone">098-988-9999</string>
+
+
+    <string name="name_tim">Timmy</string>
+    <string name="surName_tim">Jimmy</string>
+    <string name="email_tim">timmy.handsome@email.com</string>
+    <string name="position_tim">Senior sleeper</string>
+    <string name="phone_tim">098-988-9999</string>
+
+    <string name="name_pond">John</string>
+    <string name="surName_pond">Doe</string>
+    <string name="email_pond">john.doe@email.com</string>
+    <string name="position_pond">Senior sleeper</string>
+    <string name="phone_pond">098-988-9999</string>
+
     <string name="btn_swap">Switch</string>
 </resources>
