@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="pad">8dp</dimen>
+    <dimen name="top">35dp</dimen>
+    <dimen name="buttom">40dp</dimen>
+    <dimen name="pic_height">250dp</dimen>
+    <dimen name="et_width">338dp</dimen>
+    <dimen name="et_height">50dp</dimen>
+</resources>

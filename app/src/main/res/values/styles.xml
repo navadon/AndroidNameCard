@@ -8,4 +8,27 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="picture" parent="">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">@dimen/pic_height</item>
+        <item name="android:layout_marginStart">@dimen/pad</item>
+        <item name="android:layout_marginTop">@dimen/top</item>
+        <item name="android:layout_marginEnd">@dimen/pad</item>
+    </style>
+
+    <style name="edittext_input" parent="">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginStart">@dimen/pad</item>
+        <item name="android:layout_marginTop">@dimen/pad</item>
+        <item name="android:layout_marginEnd">@dimen/pad</item>
+        <item name="android:layout_marginBottom">@dimen/pad</item>
+        <item name="android:background">@color/white</item>
+    </style>
+
+    <style name="edittext_box" parent="">
+        <item name="android:layout_width">@dimen/et_width</item>
+        <item name="android:layout_height">@dimen/et_height</item>
+        <item name="android:gravity">center</item>
+    </style>
 </resources>

@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="name">Arinchai Nanjaruwong</string>
+    <string name="code">580610692</string>
+    <string name="github">Magmanex</string>
+    <string name="gitlink">https://github.com/magmanex</string>
 </resources>

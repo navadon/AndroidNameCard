@@ -11,7 +11,7 @@
     <de.hdodenhof.circleimageview.CircleImageView xmlns:app="http://schemas.android.com/apk/res-auto"
         android:id="@+id/profile_image"
         style="@style/picture"
-        android:src="@drawable/profile"
+        android:src="@drawable/git"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
@@ -28,7 +28,7 @@
 
         <android.support.design.widget.TextInputEditText
             style="@style/edittext_box"
-            android:text="@string/name"
+            android:text="@string/github"
             />
     </android.support.design.widget.TextInputLayout>
 
@@ -42,7 +42,7 @@
 
         <android.support.design.widget.TextInputEditText
             style="@style/edittext_box"
-            android:text="@string/code"/>
+            android:text="@string/gitlink"/>
     </android.support.design.widget.TextInputLayout>
 
 
