@@ -1,3 +1,32 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="title_activity_billy">Billy_Namecard</string>
+
+
+    //copy
+    <string name="process">Process</string>
+    <string name="greeting">Hello</string>
+    <string name="et_input_hint">Type your name here</string>
+    <string name="tv_output_init"></string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="mark">Student2</string>
+    <string name="billy">Student1</string>
+
+    <string name="StdntCard">Student Card</string>
+    <string name="Name">Name</string>
+    <string name="StudentID">Student ID</string>
+    <string name="ID">ID</string>
+    <string name="Faculty">Faculty</string>
+
+
+
+    <string name="FullName1">    MR.NARAVIT SANMANORAK</string>
+    <string name="StudentID1">    580611030</string>
+    <string name="FullID1">    1 5007 00196 23 8</string>
+    <string name="FullFaculty">    Information System and \nNetwork Engineering</string>
+
+    <string name="FullName2">    MR.MARK IRWIN GOH</string>
+    <string name="StudentID2">    610611801</string>
+    <string name="FullID2">    H50885846</string>
 </resources>

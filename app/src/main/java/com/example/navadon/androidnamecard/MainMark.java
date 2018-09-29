@@ -1,25 +1,24 @@
 package com.example.navadon.androidnamecard;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 
-public class MainActivity extends AppCompatActivity {
+public class MainMark extends AppCompatActivity {
 
     private View.OnClickListener onClickListener;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_mark);
         initView();
     }
 
     private void initView(){
         initOnClickListener();
-        findViewById(R.id.btn_billy).setOnClickListener(onClickListener);
-        findViewById(R.id.btn_mark).setOnClickListener(onClickListener);
+        findViewById(R.id.btn_next0).setOnClickListener(onClickListener);
     }
 
     private void initOnClickListener(){
@@ -28,26 +27,15 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
-
-                    case R.id.btn_billy:
-                        Intent intent = new Intent(MainActivity.this, MainBilly.class);
-                        startActivity(intent);
-                        finish();
-                        break;
-                    case R.id.btn_mark:
-                        Intent intent2 = new Intent(MainActivity.this, MainMark.class);
+                    case R.id.btn_next0:
+                        Intent intent2 = new Intent(MainMark.this, MainBilly.class);
                         startActivity(intent2);
                         finish();
                         break;
 
                 }
-
             }
         };
     }
 
-
-
-
-    }
-
+}
