@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="email">Email : tour12033@hotmail.com</string>
+    <string name="facebook">Facebook : Tour panurat</string>
+    <string name="cradite">By Tour 580611047</string>
+    <string name="name">Mr. PANURAT SUTIGOOLABUD</string>
+    <string name="show_age">Show Age</string>
+    <string name="show_birthday">Show Birthday</string>
 </resources>
