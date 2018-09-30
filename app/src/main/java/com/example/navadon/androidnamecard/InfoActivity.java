@@ -6,17 +6,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
-public class MainActivity extends Activity implements View.OnClickListener{
+public class InfoActivity extends Activity implements View.OnClickListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        findViewById(R.id.button0).setOnClickListener(this);
+        setContentView(R.layout.activity_info);
+        findViewById(R.id.button).setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
-        startActivity(new Intent(this, InfoActivity.class));
+        finish();
     }
 }
