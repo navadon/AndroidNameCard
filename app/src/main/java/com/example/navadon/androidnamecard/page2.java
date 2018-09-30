@@ -2,18 +2,19 @@ package com.example.navadon.androidnamecard;
 
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
-
-public class MainActivity extends AppCompatActivity {
+public class page2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.page2);
+
+
     }
 
     // This "process" method MUST be bound in the layout XML file, "android:onClick="process""
@@ -25,7 +26,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void nextPage(){
-        Intent next = new Intent(this,page2.class);
+        Intent next = new Intent(this,MainActivity.class);
         startActivity(next);
     }
 
@@ -38,3 +39,5 @@ public class MainActivity extends AppCompatActivity {
 
 
 }
+
+

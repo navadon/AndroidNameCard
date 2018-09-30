@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="vorasorn">Vorasorn Siripankul </string>
+    <string name="email">vorason.si@gmail.com</string>
+    <string name="nice_faber">nice_faber</string>
+    <string name="face">VorasonSi</string>
+    <string name="ps">PS: \"Can click picture\"</string>
+    <string name="warning">\"Warning: The picture you are about to see has a chocking</string>
+
+
 </resources>
