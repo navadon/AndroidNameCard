@@ -6,13 +6,15 @@
     <string name="surName_tim">Jimmy</string>
     <string name="email_tim">timmy.handsome@email.com</string>
     <string name="position_tim">Senior sleeper</string>
-    <string name="phone_tim">098-988-9999</string>
+    <string name="phone_tim">098–988–9999</string>
 
-    <string name="name_pond">John</string>
-    <string name="surName_pond">Doe</string>
-    <string name="email_pond">john.doe@email.com</string>
-    <string name="position_pond">Senior sleeper</string>
-    <string name="phone_pond">098-988-9999</string>
+    <string name="name_pond">Tanapon</string>
+    <string name="surName_pond">Nanta</string>
+    <string name="email_pond">pangpond556_@hotmail.com</string>
+    <string name="position_pond">Senior Eater</string>
+    <string name="phone_pond">063-446-1320</string>
 
     <string name="btn_swap">Switch</string>
+    <string name="image2">image2</string>
+    <string name="image1">image1</string>
 </resources>
