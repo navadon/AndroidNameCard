@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="show_data">Show Data</string>
+    <string name="my_name">Tanawat Klomklom</string>
+    <string name="my_nickname">First</string>
+    <string name="my_id">580610645</string>
+    <string name="my_sub">Mobile Application development</string>
+    <string name="my_cpe24">#CPE24</string>
+    <string name="hide_data">Hide Data</string>
 </resources>
