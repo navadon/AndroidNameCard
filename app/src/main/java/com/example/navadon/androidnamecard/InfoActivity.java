@@ -12,7 +12,7 @@ public class InfoActivity extends Activity implements View.OnClickListener {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_info);
-        findViewById(R.id.button).setOnClickListener(this);
+        findViewById(R.id.button2).setOnClickListener(this);
     }
 
     @Override

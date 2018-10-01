@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="zero">0dp</dimen>
+    <dimen name="namePadding">20dp</dimen>
+    <dimen name="name">30sp</dimen>
+    <dimen name="buttonMargin">2dp</dimen>
+    <dimen name="text">18sp</dimen>
+    <dimen name="textPadding">10dp</dimen>
+</resources>

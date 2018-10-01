@@ -15,8 +15,8 @@
 
     <ImageView
         android:src="@drawable/ic_call_24dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
         android:background="@color/colorBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewNum0"
@@ -25,12 +25,12 @@
 
     <TextView
         android:id="@+id/textViewNum0"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:text="@string/phoneNumberTitle"
-        android:textSize="16sp"
+        android:textSize="@dimen/text"
         android:background="@color/colorAccent"
-        android:padding="10dp"
+        android:padding="@dimen/textPadding"
         app:layout_constraintBottom_toTopOf="@+id/textViewEmail0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -39,20 +39,20 @@
 
     <TextView
         android:id="@+id/textViewNum1"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:textSize="16sp"
+        android:textSize="@dimen/text"
         android:text="@string/phoneNumber"
-        android:padding="12dp"
+        android:padding="@dimen/textPadding"
         app:layout_constraintTop_toBottomOf="@id/textViewNum0"
         app:layout_constraintStart_toEndOf="@id/guideline0"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:src="@drawable/ic_email_24dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
         android:background="@color/colorBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewEmail0"
@@ -61,12 +61,12 @@
 
     <TextView
         android:id="@+id/textViewEmail0"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:text="@string/emailTitle"
-        android:textSize="16sp"
+        android:textSize="@dimen/text"
         android:background="@color/colorAccent"
-        android:padding="10dp"
+        android:padding="@dimen/textPadding"
         app:layout_constraintBottom_toTopOf="@+id/textViewAddr0"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -75,20 +75,20 @@
 
     <TextView
         android:id="@+id/textViewEmail1"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:textSize="16sp"
+        android:textSize="@dimen/text"
         android:text="@string/email"
-        android:padding="12dp"
+        android:padding="@dimen/textPadding"
         app:layout_constraintTop_toBottomOf="@id/textViewEmail0"
         app:layout_constraintStart_toEndOf="@id/guideline0"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <ImageView
         android:src="@drawable/ic_location_24dp"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
+        android:layout_width="@dimen/zero"
+        android:layout_height="@dimen/zero"
         android:background="@color/colorBar"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/textViewAddr0"
@@ -97,12 +97,12 @@
 
     <TextView
         android:id="@+id/textViewAddr0"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:background="@color/colorAccent"
-        android:textSize="16sp"
+        android:textSize="@dimen/text"
         android:text="@string/addressTitle"
-        android:padding="10dp"
+        android:padding="@dimen/textPadding"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
@@ -111,35 +111,26 @@
 
     <TextView
         android:id="@+id/textViewAddr1"
-        android:layout_width="0dp"
+        android:layout_width="@dimen/zero"
         android:layout_height="wrap_content"
         android:background="@color/colorPrimary"
-        android:textSize="16sp"
+        android:textSize="@dimen/text"
         android:text="@string/address"
-        android:padding="12dp"
+        android:padding="@dimen/textPadding"
         app:layout_constraintTop_toBottomOf="@id/textViewAddr0"
         app:layout_constraintStart_toEndOf="@id/guideline0"
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/button2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="4dp"
-        android:layout_marginTop="4dp"
+        android:layout_marginStart="@dimen/buttonMargin"
+        android:layout_marginTop="@dimen/buttonMargin"
         android:backgroundTint="@color/colorAccent"
         android:text="@string/buttonBack"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <!--<TextView-->
-    <!--android:id="@+id/textView6"-->
-    <!--android:layout_width="0dp"-->
-    <!--android:layout_height="0dp"-->
-    <!--app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--app:layout_constraintEnd_toEndOf="parent"-->
-    <!--app:layout_constraintStart_toEndOf="@id/view0"-->
-    <!--app:layout_constraintTop_toTopOf="parent" />-->
 
 
 </android.support.constraint.ConstraintLayout>
