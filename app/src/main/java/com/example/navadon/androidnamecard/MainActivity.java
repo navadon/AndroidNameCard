@@ -12,7 +12,7 @@ public class MainActivity extends AppCompatActivity {
     CardView cardView;
     Button button;
     private View.OnClickListener onClickListener;
-    Boolean bool = true;
+    Boolean aboolean = true;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -48,14 +48,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void showData() {
-       if (bool == true){
+       if (aboolean == true){
            cardView.setVisibility(View.VISIBLE);
            button.setText(getString(R.string.hide_data));
-           bool = false;
-       }else if (bool ==false){
+           aboolean = false;
+       }else if (aboolean ==false){
            cardView.setVisibility(View.INVISIBLE);
            button.setText(getString(R.string.show_data));
-           bool = true;
+           aboolean = true;
        }
     }
 
