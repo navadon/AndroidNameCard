@@ -1,3 +1,17 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="string_isne">Information System and Network Engineering</string>
+    <string name="string_email">molysulfur.mos@gmail.com</string>
+    <string name="string_std_code">580611065</string>
+    <string name="string_std_code_33">580611033</string>
+    <string name="string_phone">099-2696776</string>
+    <string name="string_change_information">Change Information</string>
+    <string name="string_address">46/4 Samahapon Mea.Tang Chiang Mai 50150</string>
+    <string name="string_apirom">APIROM YABOON</string>
+    <string name="string_btn_apirom">APIROM</string>
+    <string name="nipitpon">Nipitpon</string>
+    <string name="string_nipitpon">Nipitpon</string>
+    <string name="string_email_nipitpon">niphitpon_daungyai@cmu.ac.th</string>
+    <string name="string_phone_nipitpon">087-2241621</string>
+    <string name="string_address_nipitpon">161 Chontida mantion room.201 Suthep Suthep Chiang Mai 50200</string>
 </resources>

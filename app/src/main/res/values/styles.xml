@@ -8,4 +8,8 @@
         <item name="colorAccent">@color/colorAccent</item>
     </style>
 
+    <style name="Contact">
+        <item name="android:textColor">@color/colorBrown</item>
+        <item name="android:padding">@dimen/dim_5_dp</item>
+    </style>
 </resources>
