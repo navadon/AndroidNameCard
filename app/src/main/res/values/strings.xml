@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="about_me">Click to Knows Me!</string>
+    <string name="name">Name: Diesel washington</string>
+    <string name="email">Email: DieselWT@gmail.com</string>
+    <string name="phone_number">Phone: 084-9293201</string>
+    <string name="Show_button">Show</string>
 </resources>
