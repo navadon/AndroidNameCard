@@ -122,14 +122,14 @@
         app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="@dimen/buttonMargin"
         android:layout_marginTop="@dimen/buttonMargin"
-        android:backgroundTint="@color/colorAccent"
-        android:text="@string/buttonBack"
-        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginEnd="@dimen/buttonMargin"
+        android:text="@string/buttonLang"
+        android:backgroundTint="@color/colorBar"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
 

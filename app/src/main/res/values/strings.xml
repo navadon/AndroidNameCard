@@ -1,13 +1,21 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+
+    <!--EN-->
     <string name="name">Warakorn\nMeakpattanapinyo</string>
     <string name="buttonInfo">more info</string>
-    <string name="buttonBack">back</string>
+    <string name="buttonLang">TH</string>
     <string name="phoneNumberTitle">Phone Number</string>
     <string name="phoneNumber">0882888459</string>
     <string name="emailTitle">E-mail</string>
     <string name="email">warakornchamp@gmail.com</string>
     <string name="addressTitle">Address</string>
-    <string name="address">222/145 หมู่ 1 \nต.สุเทพ อ.เมืองเชียงใหม่ จ.เชียงใหม่ 50200</string>
+    <string name="address">222/145 village No.1\nSuthep Amphoe Mueang Chiang Mai\nChiang Mai 50200</string>
+
+    <!--TH-->
+    <string name="buttonLangTH">EN</string>
+    <string name="phoneNumberTitleTH">เบอร์โทร</string>
+    <string name="addressTitleTH">ที่อยู่</string>
+    <string name="addressTH">222/145 หมู่ 1 \nต.สุเทพ อ.เมืองเชียงใหม่ จ.เชียงใหม่ 50200</string>
 
 </resources>
