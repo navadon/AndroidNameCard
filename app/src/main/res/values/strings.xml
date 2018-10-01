@@ -1,3 +1,27 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+
+    <string name="Name">Phakin Chukiatkajohn</string>
+
+    <string name="Phone">Phone : </string>
+    <string name="Email">Email : </string>
+    <string name="Date_Of_Birthday">Birthday : </string>
+    <string name="Age">Age : </string>
+
+    <string name="Phonethai">เบอร์ : </string>
+    <string name="Emailthai">อีเมล์ : </string>
+    <string name="Date_Of_Birthdaythai">วันเกิด : </string>
+    <string name="Agethai">อายุ : </string>
+
+    <string name="Phonenum">083-515-3409</string>
+    <string name="Emailis">Phakin.chu@Gmail.com</string>
+    <string name="Date_Of_Birthdayis">25 May 1997</string>
+    <string name="Ageis">21</string>
+
+    <string name="EmailThaiis">Phakin.chu@Gmail.com</string>
+    <string name="Date_Of_BirthdayThaiis">25 พฤษภาคม 2540</string>
+    <string name="AgeThaiis">21</string>
+
+    <string name="More">more</string>
+
 </resources>

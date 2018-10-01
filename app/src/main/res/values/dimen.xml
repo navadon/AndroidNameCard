@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <dimen name="widthNameCard">340dp</dimen>
+    <dimen name="heightNameCard">200dp</dimen>
+    <dimen name="margintop">150dp</dimen>
+    <dimen name="marginleft">20dp</dimen>
+    <dimen name="marginright">20dp</dimen>
+
+    <dimen name="margintopName">60dp</dimen>
+    <dimen name="marginleftName">10dp</dimen>
+    <dimen name="marginrightName">10dp</dimen>
+    <dimen name="marginbottomName">40dp</dimen>
+
+    <dimen name="margintopDetail">10dp</dimen>
+    <dimen name="marginleftDetail">10dp</dimen>
+    <dimen name="marginrightDetail">10dp</dimen>
+
+    <dimen name="paddingInfo">10dp</dimen>
+
+</resources>
