@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".Main2Activity">
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -27,18 +27,18 @@
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/nameKri"
+            android:text="@string/nameGod"
             android:textSize="30sp"
-            android:id="@+id/kri"
+            android:id="@+id/God"
             />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/lastNameKri"
+            android:text="@string/lastNameGod"
             android:textSize="30sp"
             android:paddingLeft="10dp"
-            android:layout_toRightOf="@+id/kri"
-            android:id="@+id/kachai"
+            android:layout_toRightOf="@+id/God"
+            android:id="@+id/l_name"
             />
 
         <TextView
@@ -46,8 +46,8 @@
             android:layout_height="wrap_content"
             android:text="@string/facutyKri"
             android:textSize="30sp"
-            android:layout_below="@+id/kri"
-            android:id="@+id/facutyKri"
+            android:layout_below="@+id/God"
+            android:id="@+id/facutyGod"
 
             />
         <TextView
@@ -55,8 +55,8 @@
             android:layout_height="wrap_content"
             android:text="@string/phoneNumberKri"
             android:textSize="30sp"
-            android:layout_below="@+id/facutyKri"
-            android:id="@+id/phoneNumberKri"
+            android:layout_below="@+id/facutyGod"
+            android:id="@+id/phoneNumberGod"
 
             />
 
@@ -65,7 +65,7 @@
             android:layout_height="wrap_content"
             android:text="@string/universityKri"
             android:textSize="30sp"
-            android:layout_below="@+id/phoneNumberKri"
+            android:layout_below="@+id/phoneNumberGod"
             android:id="@+id/uiversity"
 
             />
@@ -75,8 +75,8 @@
             android:layout_width="200dp"
             android:layout_height="200dp"
             android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/profilekri"
-            android:layout_toRightOf="@+id/facutyKri"
+            app:srcCompat="@mipmap/profilek"
+            android:layout_toRightOf="@+id/facutyGod"
             android:paddingLeft="70dp"
 
             />
@@ -86,9 +86,7 @@
             android:layout_below="@id/uiversity"
             android:layout_margin="30dp"
             android:text="swap"
-            android:onClick="swap"
             android:id="@+id/buttonSwap1"
             />
-     </RelativeLayout>
-
-</android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+</android.support.design.widget.CoordinatorLayout>
