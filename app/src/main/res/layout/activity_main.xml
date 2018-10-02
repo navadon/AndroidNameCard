@@ -1,18 +1,133 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/background"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    android:background="@drawable/bg2">
 
-    <TextView
+    <LinearLayout
+        android:id="@+id/front"
+        android:onClick="showInformation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        >
 
-</android.support.constraint.ConstraintLayout>
+
+        <ImageView
+            android:id="@+id/logo_front"
+            android:layout_width="@dimen/logo_company"
+            android:layout_height="@dimen/logo_company"
+            android:layout_gravity="center_horizontal"
+            android:src="@drawable/logoback" />
+
+        <TextView
+            android:id="@+id/text_company"
+            style="@style/company_front"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:text="@string/company_name" />
+
+        <TextView
+            style="@style/information"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+
+            android:text="@string/advice" />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/logo_dev"
+        android:layout_width="@dimen/logo_dev"
+        android:layout_height="@dimen/logo_dev"
+        android:layout_alignBottom="@id/text_position"
+        android:layout_marginRight="@dimen/phase"
+        android:layout_toLeftOf="@id/text_name"
+        android:src="@drawable/dev" />
+
+
+    <TextView
+        style="@style/name"
+        android:id="@+id/text_name"
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/owner_name" />
+
+    <TextView
+        android:id="@+id/text_position"
+        style="@style/position"
+        android:layout_below="@+id/text_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/position" />
+
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/phase"
+        android:id="@+id/back"
+        android:onClick="showInformation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/text_position"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/contrack_1"
+            style="@style/contrack"
+            android:text="@string/address" />
+
+        <TextView
+            android:id="@+id/contrack_2"
+            style="@style/contrack"
+            android:text="@string/email" />
+
+        <TextView
+            android:id="@+id/contrack_3"
+            style="@style/contrack"
+            android:text="@string/phone" />
+
+        <TextView
+            android:id="@+id/contrack_4"
+            style="@style/contrack"
+
+            android:text="@string/webpage" />
+        <TextView
+            android:id="@+id/contrack_5"
+           style="@style/contrack"
+            android:text="@string/advice"
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:layout_above="@id/text_name"
+        android:id="@+id/logo_back"
+        android:layout_width="@dimen/logo_company"
+        android:layout_height="@dimen/logo_company"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logoback"
+        />
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/back"
+        android:layout_marginTop="@dimen/phase"
+        android:layout_centerHorizontal="true"
+        android:onClick="showInformation"
+        android:background="@color/Black"
+        android:textColor="@color/White"
+        android:text="Back"
+         />
+
+
+</RelativeLayout>

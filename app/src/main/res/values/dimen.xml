@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="logo_company">200dp</dimen>
+    <dimen name="logo_dev">50dp</dimen>
+    <dimen name="phase">10dp</dimen>
+</resources>

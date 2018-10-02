@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="company_name">Company Name</string>
+    <string name="advice">Press enter to about us</string>
+    <string name="owner_name">Kanin  Sukarote</string>
+    <string name="position">Developer</string>
+    <string name="address">239 Huay Kaew Road, Suthep, Chiang Mai</string>
+    <string name="email">AndroiDeveloper@gmail.com</string>
+    <string name="phone">02"-"1234"-"555</string>
+    <string name="webpage">www.Androiddev.get.aa.a</string>
+    <string name="black">Black Mode</string>
+    <string name="white">White Mode</string>
+    <string name="Nickname">Kin</string>
+    <string name="line">line1234</string>
+
 </resources>
