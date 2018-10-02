@@ -3,4 +3,8 @@
     <color name="colorPrimary">#3F51B5</color>
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
+
+    <!--Colors use in this project-->
+    <color name="colorBackground">#FAFAFA</color>
+    <color name="colorClick">#4689C8</color>
 </resources>
