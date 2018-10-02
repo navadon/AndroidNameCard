@@ -1,3 +1,5 @@
 <resources>
-    <string name="app_name">Android Name Card</string>
+    <string name="app_name">MyNameCard</string>
+    <string name="backtoyok">Back to 570611040 name card  </string>
+    <string name="nexttokim">NEXT to 560611024 name card</string>
 </resources>
