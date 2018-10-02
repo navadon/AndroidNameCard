@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">Android Name Card</string>
+    <string name="app_name">My Application</string>
+    <string name="testButton">Button</string>
+    <string name="lBarFaculty">L-bar</string>
+    <string name="testTextBox">The screen is 384x567 dp</string>
+    <string name="textButtonNext">Toggle</string>
+    <string name="text1">Natthapol Pusa\n580611017\nISNE</string>
+    <string name="text2">chameloengat@gmail.com\nContact me @room 422\nThis test was run on Nexus 5X which gives the correct result of the app</string>
 </resources>
