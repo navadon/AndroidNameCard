@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="frontflip">tap B to flip</string>
+    <string name="backflip">tap info to flip</string>
 </resources>
