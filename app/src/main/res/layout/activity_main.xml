@@ -1,113 +1,105 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout
+<layout xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_margin="@dimen/dim_18_dp"
-    android:background="@drawable/circle"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-    <LinearLayout
-        android:id="@+id/layout_title"
-        android:padding="@dimen/dim_15_sp"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewModel"
+            type="com.example.navadon.androidnamecard.MainViewModel" />
+    </data>
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/contentColor"
+        android:layout_margin="@dimen/dim_18_dp"
+        android:background="@drawable/circle"
+        android:layout_height="match_parent"
         android:orientation="vertical"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        tools:context=".MainActivity">
 
-        <TextView
-            android:id="@+id/tv_name"
-            android:textColor="@color/white"
+        <LinearLayout
+            android:id="@+id/layout_title"
+            android:padding="@dimen/dim_15_sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/contentColor"
+            android:orientation="vertical"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.tvName}"
+                android:textSize="@dimen/dim_18_sp" />
+
+            <TextView
+                android:id="@+id/tv_code"
+                android:textColor="@color/white"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.tvCode}" />
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/string_apirom"
-            android:textSize="@dimen/dim_18_sp" />
+            android:layout_marginTop="@dimen/dim_18_dp"
+            android:src="@drawable/cmu_logo"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/layout_title" />
 
-        <TextView
-            android:id="@+id/tv_code"
-            android:textColor="@color/white"
-            android:layout_width="wrap_content"
+        <LinearLayout
+            android:id="@+id/relativeLayout"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/string_std_code" />
-    </LinearLayout>
-
-    <ImageView
-        android:id="@+id/imageView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dim_18_dp"
-        android:src="@drawable/cmu_logo"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/layout_title" />
-
-    <LinearLayout
-        android:id="@+id/relativeLayout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toTopOf="@+id/btn_nipitpon"
-        app:layout_constraintEnd_toEndOf="@+id/layout_title"
-        app:layout_constraintStart_toStartOf="@+id/layout_title"
-        app:layout_constraintTop_toBottomOf="@+id/imageView">
-
-        <TextView
-            android:id="@+id/tv_email"
-            style="@style/Contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_email"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <TextView
-            android:id="@+id/tv_phone"
-            style="@style/Contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/string_phone"
-            app:layout_constraintStart_toStartOf="@+id/tv_email"
-            app:layout_constraintTop_toBottomOf="@+id/tv_email" />
-
-        <TextView
-            android:id="@+id/tv_address"
-            style="@style/Contact"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:ems="12"
+            android:layout_marginBottom="8dp"
             android:gravity="center"
-            android:text="@string/string_address"
-            app:layout_constraintStart_toStartOf="@+id/tv_phone"
-            app:layout_constraintTop_toBottomOf="@+id/tv_phone" />
-    </LinearLayout>
+            android:orientation="vertical"
+            app:layout_constraintBottom_toTopOf="@+id/btn_change"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/imageView">
 
-    <Button
-        android:id="@+id/btn_apirom"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dim_18_dp"
-        android:backgroundTint="@color/contentColor"
-        android:text="@string/string_btn_apirom"
-        android:onClick="changeInformation"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent" />
+            <TextView
+                android:id="@+id/tv_email"
+                style="@style/Contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.tvEmail}"
+                app:layout_constraintStart_toStartOf="parent" />
 
-    <Button
-        android:id="@+id/btn_nipitpon"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="@dimen/dim_18_dp"
-        android:backgroundTint="@color/contentColor"
-        android:text="@string/nipitpon"
-        android:textColor="@color/white"
-        android:onClick="changeInformation"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btn_apirom" />
-</android.support.constraint.ConstraintLayout>
+            <TextView
+                android:id="@+id/tv_phone"
+                style="@style/Contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewModel.tvPhone}" />
+
+            <TextView
+                android:id="@+id/tv_address"
+                style="@style/Contact"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ems="12"
+                android:gravity="center"
+                android:text="@{viewModel.tvAddress}" />
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/btn_change"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/dim_18_dp"
+            android:backgroundTint="@color/contentColor"
+            android:text="@string/string_changecard"
+            android:onClick="@{() -> viewModel.changeInformation()}"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </android.support.constraint.ConstraintLayout>
+</layout>
