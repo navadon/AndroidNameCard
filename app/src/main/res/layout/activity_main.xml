@@ -1,56 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg2"
-    tools:context=".MainActivity">
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools">
 
-   <LinearLayout
+   <data>
+      <variable
+          name="viewmodel"
+          type="com.example.navadon.androidnamecard.MainViewModel"/>
+   </data>
+   <android.support.constraint.ConstraintLayout
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:gravity="center"
-       android:orientation="vertical">
+       android:background="@drawable/bg2"
+       tools:context=".MainActivity">
 
-      <RelativeLayout
-          android:id="@+id/cardView"
-          android:layout_width="@dimen/widthCard"
-          android:layout_height="@dimen/heightCard"
-          android:layout_margin="@dimen/marginCardSmile"
-          android:orientation="vertical"
-          >
+      <LinearLayout
+          android:layout_width="match_parent"
+          android:layout_height="match_parent"
+          android:gravity="center"
+          android:orientation="vertical">
 
-         <TextView
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:alpha="0.5"
-             android:background="@drawable/card"
-             android:padding="@dimen/paddingCardSmile"
-             />
+         <RelativeLayout
+             android:id="@+id/cardView"
+             android:layout_width="@dimen/widthCard"
+             android:layout_height="@dimen/heightCard"
+             android:layout_margin="@dimen/marginCardSmile"
+             android:orientation="vertical"
+             >
 
-         <TextView
-             android:id="@+id/nameMe"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             style="@style/partNameSmile"
-             />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha="0.5"
+                android:background="@drawable/card"
+                android:padding="@dimen/paddingCardSmile"
+                />
 
-         <TextView
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:text="@string/telMailSmile"
-             style="@style/partContactSmile"
-             />
+            <TextView
+                android:id="@+id/nameMe"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.fullName}"
+                style="@style/partNameSmile"
+                />
 
-      </RelativeLayout>
+            <TextView
+                android:id="@+id/contactSmile"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{viewmodel.contact}"
+                style="@style/partContactSmile"
+                />
 
-      <Button
-          android:id="@+id/btn_click"
-          android:background="@drawable/button1"
-          style="@style/btn"/>
+         </RelativeLayout>
 
-   </LinearLayout>
+         <Button
+             android:id="@+id/btn_click"
+             android:background="@drawable/button1"
+             style="@style/btn"/>
 
+      </LinearLayout>
 
-</android.support.constraint.ConstraintLayout>
+   </android.support.constraint.ConstraintLayout>
+</layout>
