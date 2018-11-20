@@ -1,108 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:orientation="vertical"
-    android:gravity="center"
-    android:layout_weight="4"
-    android:background="@color/black">
-
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+    <data>
+        <variable name="viewmodel" type="com.example.navadon.androidnamecard.MainViewModel"/>
+    </data>
     <LinearLayout
-        android:layout_weight="3"
-        android:layout_width="wrap_content"
-        android:layout_height="0dp"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context=".MainActivity"
+        android:orientation="vertical"
         android:gravity="center"
-        android:orientation="vertical">
-
-        <ImageView
-            android:id="@+id/img_profile_tim"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:contentDescription="@string/image1"
-            android:src="@drawable/profile_tim" />
+        android:layout_weight="4"
+        android:background="@color/black">
 
         <LinearLayout
-            android:id="@+id/linearLayout"
+            android:layout_weight="3"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="8dp"
-            android:layout_marginTop="80dp"
-            android:layout_marginEnd="8dp"
-            android:orientation="horizontal">
+            android:layout_height="0dp"
+            android:gravity="center"
+            android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/tv_name_tim"
+            <ImageView
+                android:id="@+id/img_profile"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:contentDescription="description"
+                android:src="@drawable/profile_tim" />
+
+            <LinearLayout
+                android:id="@+id/linearLayout"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/name_tim"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="80dp"
+                android:layout_marginEnd="8dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@{viewmodel.name}"
+                    android:textAlignment="center"
+                    android:textColor="@color/gold"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/tv_surname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:text="@{viewmodel.surname}"
+                    android:textAlignment="center"
+                    android:textColor="@color/gold"
+                    android:textSize="24sp"
+                    android:textStyle="normal"
+                    android:typeface="serif" />
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{viewmodel.position}"
                 android:textAlignment="center"
-                android:textColor="@color/gold"
-                android:textSize="24sp"
-                android:textStyle="bold"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:textStyle="normal"
                 android:typeface="serif" />
 
             <TextView
-                android:id="@+id/tv_surname_tim"
+                android:id="@+id/tv_email"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:text="@string/surName_tim"
+                android:layout_marginTop="10dp"
+                android:text="@{viewmodel.email}"
                 android:textAlignment="center"
-                android:textColor="@color/gold"
-                android:textSize="24sp"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
+                android:textStyle="normal"
+                android:typeface="serif" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@{viewmodel.phoneNumber}"
+                android:textAlignment="center"
+                android:textColor="@color/grey"
+                android:textSize="16sp"
                 android:textStyle="normal"
                 android:typeface="serif" />
         </LinearLayout>
 
-
-        <TextView
-            android:id="@+id/tv_position_tim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/position_tim"
-            android:textAlignment="center"
-            android:textColor="@color/grey"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            android:typeface="serif" />
-
-        <TextView
-            android:id="@+id/tv_email_tim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/email_tim"
-            android:textAlignment="center"
-            android:textColor="@color/grey"
-            android:textSize="16sp"
-            android:textStyle="normal"
-            android:typeface="serif" />
-
-        <TextView
-            android:id="@+id/tv_phone_tim"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:text="@string/phone_tim"
-            android:textAlignment="center"
-            android:textColor="@color/grey"
-            android:textSize="16sp"
-            android:textStyle="normal"
+        <Button
+            android:id="@+id/btn_swap"
+            android:layout_width="150dp"
+            android:layout_height="40dp"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/btn_switch"
+            android:text="@string/btn_swap"
+            android:textColor="@color/black"
             android:typeface="serif" />
     </LinearLayout>
-
-    <Button
-        android:id="@+id/btn_swap"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="10dp"
-        android:background="@drawable/btn_switch"
-        android:text="@string/btn_swap"
-        android:textColor="@color/black"
-        android:typeface="serif" />
-</LinearLayout>
+</layout>
