@@ -1,6 +1,7 @@
 package com.example.navadon.androidnamecard;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -14,10 +15,16 @@ import android.widget.ImageView;
 public class MainActivity extends AppCompatActivity {
     private View effectOnContainer1;
     private ImageButton image;
+//    private ActivityMainBinding binding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+//        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+//
+//        binding.tvTitle.setText("What's up");
+
         overridePendingTransition(R.anim.anim_slide_back,R.anim.anim_slide_back);
         effectOnContainer1 = findViewById(R.id.container1);
         AlphaAnimation animation = new AlphaAnimation(0, 1);
