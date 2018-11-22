@@ -15,19 +15,19 @@
         android:orientation="vertical">
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="50dp"
+            android:layout_height="@dimen/layout50dp"
             android:gravity="right"
             >
             <Button
                 android:id="@+id/TH"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
                 android:clickable="false"
                 android:enabled="false"
                 android:text="TH" />
             <Button
                 android:id="@+id/EN"
-                android:layout_width="50dp"
+                android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
                 android:onClick="process"
                 android:text="EN" />
@@ -43,7 +43,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:layout_weight="0.4"
-                    android:padding="20dp"
+                    android:padding="@dimen/layout20dp"
                     android:onClick="imageClick"
                     android:src="@mipmap/profile"/>
                 <ImageView
@@ -65,9 +65,9 @@
                         android:layout_below="@id/TH"
                         android:textStyle="bold"
                         android:textColor="@color/colorCode"
-                        android:layout_marginTop="60dp"
-                        android:text="คุณนิวัฒน์  สารภี"
-                        android:textSize="25sp" />
+                        android:layout_marginTop="@dimen/layout60dp"
+                        android:text="@string/name_th"
+                        android:textSize="@dimen/font25sp" />
 
                     <RelativeLayout
                         android:layout_width="match_parent"
@@ -76,12 +76,12 @@
                             android:id="@+id/code"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="@dimen/layout10dp"
+                            android:layout_marginTop="@dimen/layout20dp"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:text="หมายเลขบัตรประชาชน :"
-                            android:textSize="15sp" />
+                            android:text="@string/id_th"
+                            android:textSize="@dimen/font15sp" />
                         <TextView
                             android:id="@+id/code1"
                             android:layout_width="wrap_content"
@@ -89,9 +89,9 @@
                             android:layout_toRightOf="@+id/code"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:layout_marginTop="20dp"
-                            android:text="1-2345-678910-88-8"
-                            android:textSize="15sp" />
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@string/id"
+                            android:textSize="@dimen/font15sp" />
                         <TextView
                             android:id="@+id/tel"
                             android:layout_width="wrap_content"
@@ -99,10 +99,10 @@
                             android:layout_below="@+id/code"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:layout_marginRight="10dp"
-                            android:layout_marginTop="20dp"
-                            android:text="เบอร์โทรติดต่อ :"
-                            android:textSize="15sp" />
+                            android:layout_marginRight="@dimen/layout10dp"
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@string/tel_th"
+                            android:textSize="@dimen/font15sp" />
 
                         <TextView
                             android:id="@+id/tel1"
@@ -112,10 +112,10 @@
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
                             android:layout_toRightOf="@+id/tel"
-                            android:layout_marginTop="20dp"
+                            android:layout_marginTop="@dimen/layout20dp"
 
-                            android:text="+66 81 2265894"
-                            android:textSize="15sp" />
+                            android:text="@string/tel"
+                            android:textSize="@dimen/font15sp" />
                         <TextView
                             android:id="@+id/add1"
                             android:layout_width="wrap_content"
@@ -123,9 +123,9 @@
                             android:layout_below="@+id/tel"
                             android:textStyle="bold"
                             android:textColor="@color/colorCode"
-                            android:layout_marginTop="20dp"
-                            android:text="จังหวัดเชียงใหม่ ประเทศไทย 50200"
-                            android:textSize="15sp" />
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@string/addr_th"
+                            android:textSize="@dimen/font15sp" />
                     </RelativeLayout>
 
 
