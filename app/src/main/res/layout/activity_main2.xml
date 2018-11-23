@@ -10,18 +10,14 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-
         android:gravity="center"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="72dp"
-        tools:layout_editor_absoluteY="20dp"
-        tools:ignore="MissingConstraints">
+        android:orientation="vertical">
 
         <RelativeLayout
             android:id="@+id/cardView_2"
             android:layout_width="@dimen/widthCard"
             android:layout_height="@dimen/heightCard"
-            android:layout_margin="@dimen/marginCardBeam"
+            android:layout_margin="@dimen/marginCardSmile"
             android:orientation="vertical">
 
             <TextView
@@ -29,24 +25,24 @@
                 android:layout_height="match_parent"
                 android:alpha="0.5"
                 android:background="@drawable/bg7"
-                android:padding="@dimen/paddingCard" />
+                android:padding="@dimen/paddingCardSmile" />
 
 
             <TextView
                 android:id="@+id/fn_1"
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/NameH"
+                android:layout_height="wrap_content"
                 android:layout_centerInParent="true"
                 style="@style/partNameBeam" />
 
 
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="@dimen/PhoneH"
+                android:layout_height="wrap_content"
                 android:layout_alignParentBottom="true"
                 android:layout_centerHorizontal="true"
                 style="@style/partContactBeam"
-                tools:ignore="InvalidId" />
+                 />
 
 
         </RelativeLayout>

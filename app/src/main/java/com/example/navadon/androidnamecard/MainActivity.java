@@ -4,6 +4,8 @@ package com.example.navadon.androidnamecard;
 import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.databinding.DataBindingUtil;
+import android.graphics.drawable.Drawable;
+import android.support.annotation.Dimension;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -15,32 +17,42 @@ public class MainActivity extends AppCompatActivity {
 
     private View.OnClickListener onClickListener;
 //    private TextView fullName;
-    private int num = 0;
+    private int num = 0,num2=0;
     private MainViewModel viewModel;
     ActivityMainBindingImpl binding;
+
+    private String fname,contact,who;
+    private Drawable background,bgBtn,bgCard,bgText;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        who = "smile";
         bindView();
         initView();
     }
+
     private void bindView(){
         viewModel = new MainViewModel();
-//        fullName = (TextView) findViewById(R.id.nameMe);
         binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         binding.setViewmodel(viewModel);
-        viewModel.setFullName(getString(R.string.nameSmile));
-        viewModel.setContact(getString(R.string.telMailSmile));
-        binding.nameMe.setText(viewModel.getFullName());
-        binding.contactSmile.setText(viewModel.getContact());
+
+        settingCard(who);
+        dataBinding();
+
+
+
+
+
     }
 
     private void initView(){
         initOnClickListener();
-        findViewById(R.id.btn_click).setOnClickListener(onClickListener);
-        findViewById(R.id.cardView).setOnClickListener(onClickListener);
+        binding.btnClick.setOnClickListener(onClickListener);
+        binding.cardView.setOnClickListener(onClickListener);
     }
 
     // You don't have to bind any functions to "android:onClick" in layout XML file.
@@ -49,34 +61,79 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
-                    case R.id.btn_click :
-                        Intent intent = new Intent( MainActivity.this,Main2Activity.class);
-                        startActivity(intent);
+                    case R.id.btnClick :
+                        if (who  == "smile"){
+                            who = "beam";
+                        }else {
+                            who = "smile";
+                        }
+                        settingCard(who);
+                        dataBinding();
                         break;
                     case R.id.cardView:
-                        changeName(num);
-                        num +=1;
+                        if (who == "smile"){
+                            changeName(num,who);
+                            num +=1;
+                        }else {
+                            changeName(num2,who);
+                            num2++;
+                        }
+
+
+
                 }
             }
         };
     }
 
     @SuppressLint("SetTextI18n")
-    private  void changeName(int val){
+    private  void changeName(int val,String who){
         if (val%2 != 0) {
-                    viewModel.setFullName( getString(R.string.nameSmile));
-//            fullName.setText( getString(R.string.nameSmile));
+                    viewModel.setFullName( who == "smile" ? getString(R.string.nameSmile) : getString(R.string.nameBeam));
         }
         else {
-            viewModel.setFullName("SMILE :D");
-//            fullName.setText("SMILE :D");
+
+            viewModel.setFullName(who == "smile" ? "SMILE :D" : "I'm BEAMMHEE. :)");
         }
         binding.nameMe.setText(viewModel.getFullName());
+
+
     }
 
+    private void settingCard(String who){
+        switch (who){
+            case "smile":
+                fname = getString(R.string.nameSmile);
+                contact = getString(R.string.telMailSmile);
+                background = getResources().getDrawable(R.drawable.bg2);
+                bgBtn = getDrawable(R.drawable.button1);
+                bgCard = getDrawable(R.drawable.card);
+                bgText = getDrawable(R.drawable.card_purple);
+                break;
+            case "beam":
+                fname = getString(R.string.nameBeam);
+                contact = getString(R.string.beamPhone);
+                background = getResources().getDrawable(R.drawable.bg3);
+                bgBtn = getDrawable(R.drawable.button2);
+                bgCard = getDrawable(R.drawable.bg7);
+                bgText = null;
+        }
 
 
+    }
 
+    private void dataBinding(){
+        viewModel.setText(fname,contact);
+        viewModel.setDrawable(background,bgBtn,bgCard,bgText);
+        binding.nameMe.setText(viewModel.getFullName());
+        binding.contactSmile.setText(viewModel.getContact());
+        binding.nameMe.setBackground(viewModel.getBgText());
+        binding.btnClick.setBackground(viewModel.getBgBtn());
+        binding.layoutBg.setBackground(viewModel.getBackground());
+        binding.card.setBackground(viewModel.getBgCard());
+
+
+    }
 
 
 

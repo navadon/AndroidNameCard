@@ -9,9 +9,10 @@
           type="com.example.navadon.androidnamecard.MainViewModel"/>
    </data>
    <android.support.constraint.ConstraintLayout
+       android:id="@+id/layoutBg"
        android:layout_width="match_parent"
        android:layout_height="match_parent"
-       android:background="@drawable/bg2"
+       android:background="@{viewmodel.background}"
        tools:context=".MainActivity">
 
       <LinearLayout
@@ -29,10 +30,11 @@
              >
 
             <TextView
+                android:id="@+id/card"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:alpha="0.5"
-                android:background="@drawable/card"
+                android:background="@{viewmodel.bgCard}"
                 android:padding="@dimen/paddingCardSmile"
                 />
 
@@ -40,8 +42,10 @@
                 android:id="@+id/nameMe"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:background="@{viewmodel.bgText}"
                 android:text="@{viewmodel.fullName}"
-                style="@style/partNameSmile"
+                android:layout_centerInParent="true"
+                style="@style/partNameBeam"
                 />
 
             <TextView
@@ -49,14 +53,16 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{viewmodel.contact}"
-                style="@style/partContactSmile"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                style="@style/partContactBeam"
                 />
 
          </RelativeLayout>
 
          <Button
-             android:id="@+id/btn_click"
-             android:background="@drawable/button1"
+             android:id="@+id/btnClick"
+             android:background="@{viewmodel.bgBtn}"
              style="@style/btn"/>
 
       </LinearLayout>
