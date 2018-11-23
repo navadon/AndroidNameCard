@@ -2,15 +2,18 @@ package com.example.navadon.androidnamecard;
 
 import android.content.Context;
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 
+import com.example.navadon.androidnamecard.databinding.ActivityBackBindingImpl;
+
 public class BackPageActivity extends AppCompatActivity {
 
-    private View.OnClickListener onClickListener;
-
+    private BackPageViewModel viewModel;
+    ActivityBackBindingImpl binding;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,25 +22,28 @@ public class BackPageActivity extends AppCompatActivity {
     }
 
     private void initView(){
-        initOnClickListener();
-        // To register click event to view
-        findViewById(R.id.btn_back).setOnClickListener(onClickListener);
+
+        viewModel = new BackPageViewModel();
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_back);
+        binding.setViewmodel(viewModel);
+
+        viewModel.setUniversity("Chiang Mai University");
+        binding.textView4.setText(viewModel.getUniversity());
+
+        viewModel.setButton("you can click in the circle");
+        binding.textView3.setText(viewModel.getButton());
+
+        viewModel.setName("วินเนอร์ อะ");
+        binding.textView.setText(viewModel.getName());
+
     }
 
-    // You don't have to bind any functions to "android:onClick" in layout XML file.
-    private void initOnClickListener(){
-        onClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                switch (v.getId()) {
-                    case R.id.btn_back:
-                        changePage(MainActivity.class);
-                        break;
-                }
-                hideKeyboardInput(v);
-            }
-        };
+    public void onclick(View v) {
+
+        changePage(MainActivity.class);
+        hideKeyboardInput(v);
     }
+
 
     private void changePage(Class i){
         startActivity(new Intent(this,i));
