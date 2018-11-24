@@ -1,14 +1,21 @@
 package com.example.navadon.androidnamecard;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
+import com.example.navadon.androidnamecard.databinding.ActivityMainBinding;
+
 public class MainActivity extends AppCompatActivity {
 
     private int check = 0;
     private View.OnClickListener onClickListener;
+
+    // Step 1 //
+    private MainViewModel viewModel;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,6 +28,11 @@ public class MainActivity extends AppCompatActivity {
         initOnClickListener();
         // To register click event to view
         findViewById(R.id.btn_change).setOnClickListener(onClickListener);
+
+        // Step 2 //
+        viewModel = new MainViewModel();
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setViewmodel(viewModel);
     }
 
     private void initOnClickListener(){
@@ -37,6 +49,17 @@ public class MainActivity extends AppCompatActivity {
                 }
             }
         };
+    }
+
+    public void click (View View){
+        long time = System.currentTimeMillis();
+        if(time%2==0)
+            viewModel.setString("even");
+        else
+            viewModel.setString("odd");
+
+        // Step 3 //
+        binding.name.setText(viewModel.getString());
     }
 
     private void changeInformation(int check){
