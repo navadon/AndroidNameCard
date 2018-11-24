@@ -22,7 +22,7 @@ public class MainActivity extends AppCompatActivity {
     ActivityMainBindingImpl binding;
 
     private String fname,contact,who;
-    private Drawable background,bgBtn,bgCard,bgText;
+    private Drawable background,bgBtn,bgCard;
 
 
 
@@ -41,7 +41,7 @@ public class MainActivity extends AppCompatActivity {
         binding.setViewmodel(viewModel);
 
         settingCard(who);
-        dataBinding();
+        dataBinding(who);
 
 
 
@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
                             who = "smile";
                         }
                         settingCard(who);
-                        dataBinding();
+                        dataBinding(who);
                         break;
                     case R.id.cardView:
                         if (who == "smile"){
@@ -95,7 +95,12 @@ public class MainActivity extends AppCompatActivity {
 
             viewModel.setFullName(who == "smile" ? "SMILE :D" : "I'm BEAMMHEE. :)");
         }
-        binding.nameMe.setText(viewModel.getFullName());
+        if (who == "smile"){
+            binding.nameMe.setText(viewModel.getFullName());
+        }else {
+            binding.nameBeam.setText(viewModel.getFullName());
+        }
+
 
 
     }
@@ -108,7 +113,6 @@ public class MainActivity extends AppCompatActivity {
                 background = getResources().getDrawable(R.drawable.bg2);
                 bgBtn = getDrawable(R.drawable.button1);
                 bgCard = getDrawable(R.drawable.card);
-                bgText = getDrawable(R.drawable.card_purple);
                 break;
             case "beam":
                 fname = getString(R.string.nameBeam);
@@ -116,21 +120,33 @@ public class MainActivity extends AppCompatActivity {
                 background = getResources().getDrawable(R.drawable.bg3);
                 bgBtn = getDrawable(R.drawable.button2);
                 bgCard = getDrawable(R.drawable.bg7);
-                bgText = null;
         }
 
 
     }
 
-    private void dataBinding(){
+    private void dataBinding(String who){
         viewModel.setText(fname,contact);
-        viewModel.setDrawable(background,bgBtn,bgCard,bgText);
-        binding.nameMe.setText(viewModel.getFullName());
-        binding.contactSmile.setText(viewModel.getContact());
-        binding.nameMe.setBackground(viewModel.getBgText());
+        viewModel.setDrawable(background,bgBtn,bgCard);
         binding.btnClick.setBackground(viewModel.getBgBtn());
         binding.layoutBg.setBackground(viewModel.getBackground());
         binding.card.setBackground(viewModel.getBgCard());
+
+        if (who == "smile"){
+            binding.nameMe.setVisibility(View.VISIBLE);
+            binding.nameBeam.setVisibility(View.INVISIBLE);
+            binding.contactSmile.setVisibility(View.VISIBLE);
+            binding.contactBeam.setVisibility(View.INVISIBLE);
+            binding.nameMe.setText(viewModel.getFullName());
+            binding.contactSmile.setText(viewModel.getContact());
+        }else {
+            binding.nameMe.setVisibility(View.INVISIBLE);
+            binding.nameBeam.setVisibility(View.VISIBLE);
+            binding.contactSmile.setVisibility(View.INVISIBLE);
+            binding.contactBeam.setVisibility(View.VISIBLE);
+            binding.nameBeam.setText(viewModel.getFullName());
+            binding.contactBeam.setText(viewModel.getContact());
+        }
 
 
     }

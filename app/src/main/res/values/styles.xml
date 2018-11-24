@@ -55,6 +55,8 @@
         <item name=" android:text">@string/beamPhone</item>
         <item name="android:textSize">@dimen/textSizePhone</item>
         <item name="android:fontFamily">@font/moon2_regular</item>
+        <item name="android:layout_alignParentBottom">true</item>
+        <item name="android:layout_centerHorizontal">true</item>
     </style>
 
 

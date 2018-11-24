@@ -39,24 +39,39 @@
                 />
 
             <TextView
-                android:id="@+id/nameMe"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:background="@{viewmodel.bgText}"
-                android:text="@{viewmodel.fullName}"
-                android:layout_centerInParent="true"
-                style="@style/partNameBeam"
-                />
+             android:id="@+id/nameMe"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:text="@{viewmodel.fullName}"
+             style="@style/partNameSmile"
+             />
+
+             <TextView
+                 android:id="@+id/nameBeam"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="@{viewmodel.fullName}"
+                 android:layout_centerInParent="true"
+                 style="@style/partNameBeam"
+                 android:visibility="invisible"
+                 />
 
             <TextView
                 android:id="@+id/contactSmile"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@{viewmodel.contact}"
-                android:layout_alignParentBottom="true"
-                android:layout_centerHorizontal="true"
-                style="@style/partContactBeam"
+                style="@style/partContactSmile"
                 />
+
+             <TextView
+                 android:id="@+id/contactBeam"
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 style="@style/partContactBeam"
+                 android:text="@{viewmodel.contact}"
+                 android:visibility="invisible"
+                 />
 
          </RelativeLayout>
 

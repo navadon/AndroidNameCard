@@ -10,7 +10,6 @@ public class MainViewModel extends ViewModel {
     private String contact;
     private Drawable background;
     private Drawable bgCard;
-    private Drawable bgText;
     private Drawable bgBtn;
 
 
@@ -19,7 +18,6 @@ public class MainViewModel extends ViewModel {
         this.contact = "Tel and email";
         this.background = null;
         this.bgCard = null;
-        this.bgText = null;
         this.bgBtn = null;
     }
 
@@ -30,11 +28,10 @@ public class MainViewModel extends ViewModel {
 
     }
 
-    public void setDrawable(Drawable background,Drawable bgBtn,Drawable bgCard,Drawable bgText){
+    public void setDrawable(Drawable background,Drawable bgBtn,Drawable bgCard){
         this.background = background;
         this.bgBtn = bgBtn;
         this.bgCard = bgCard;
-        this.bgText =bgText;
     }
 
 
@@ -56,9 +53,6 @@ public class MainViewModel extends ViewModel {
 
     public Drawable getBgCard() {
         return bgCard;
-    }
-    public Drawable getBgText() {
-        return bgText;
     }
 
     public Drawable getBgBtn() {
