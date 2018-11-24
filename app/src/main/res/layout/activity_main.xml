@@ -1,15 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/tools" >
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.navadon.androidnamecard.MainViewModel" ></variable>
+    </data>
+
+<android.support.constraint.ConstraintLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="horizontal"
+    android:background="@drawable/background"
     tools:context=".MainActivity">
 
-
-    <LinearLayout
+        <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+<<<<<<< HEAD
         android:background=""
         android:orientation="vertical"
         tools:ignore="MissingConstraints"
@@ -22,21 +32,32 @@
             android:background="@drawable/background"
             android:padding="20dp">
 
+=======
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/layout50dp"
+            android:gravity="right"
+            >
+>>>>>>> 13c8db7f3380e5609b814723a306224356eac25b
             <Button
-                android:id="@+id/TH"
-                android:layout_width="50dp"
+                android:id="@+id/btn_th"
+                android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@+id/EN"
+                android:clickable="@{viewmodel.button_TH}"
+                android:enabled="@{viewmodel.button_TH}"
+                android:onClick="process"
                 android:text="TH" />
-
             <Button
-                android:id="@+id/EN"
-                android:layout_width="50dp"
+                android:id="@+id/btn_en"
+                android:layout_width="@dimen/layout50dp"
                 android:layout_height="wrap_content"
-                android:layout_alignParentRight="true"
-                android:layout_alignParentTop="true"
+                android:onClick="process"
+                android:clickable="@{viewmodel.button_EN}"
+                android:enabled="@{viewmodel.button_EN}"
                 android:text="EN" />
 
+<<<<<<< HEAD
 
             <TextView
                 android:id="@+id/name"
@@ -110,10 +131,115 @@
                 app:srcCompat="@mipmap/center" />
 
 
+=======
+        </LinearLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.4"
+                    android:padding="@dimen/layout20dp"
+                    android:onClick="imageClick"
+                    android:src="@mipmap/profile"/>
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.6"
+                    android:src="@mipmap/center"
+                    />
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_weight="0.3"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/tv_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_below="@id/TH"
+                        android:textStyle="bold"
+                        android:textColor="@color/colorCode"
+                        android:layout_marginTop="@dimen/layout60dp"
+                        android:text="@{viewmodel.name}"
+                        android:textSize="@dimen/font25sp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+                        <TextView
+                            android:id="@+id/idname"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginRight="@dimen/layout10dp"
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorCode"
+                            android:text="@{viewmodel.id_name}"
+                            android:textSize="@dimen/font15sp" />
+                        <TextView
+                            android:id="@+id/tv_id"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/idname"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorCode"
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@{viewmodel.id}"
+                            android:textSize="@dimen/font15sp" />
+                        <TextView
+                            android:id="@+id/tv_tel_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/idname"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorCode"
+                            android:layout_marginRight="@dimen/layout10dp"
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@{viewmodel.tel_name}"
+                            android:textSize="@dimen/font15sp" />
+
+                        <TextView
+                            android:id="@+id/tv_tel"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/idname"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorCode"
+                            android:layout_toRightOf="@+id/tv_tel_name"
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@{viewmodel.tel}"
+                            android:textSize="@dimen/font15sp" />
+                        <TextView
+                            android:id="@+id/tv_address"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/tv_tel_name"
+                            android:textStyle="bold"
+                            android:textColor="@color/colorCode"
+                            android:layout_marginTop="@dimen/layout20dp"
+                            android:text="@{viewmodel.address}"
+                            android:textSize="@dimen/font15sp" />
+                    </RelativeLayout>
+
+
+
+                </LinearLayout>
+            </LinearLayout>
+>>>>>>> 13c8db7f3380e5609b814723a306224356eac25b
         </RelativeLayout>
-    </LinearLayout>
 
-
+<<<<<<< HEAD
     <!--555555555555-->
+=======
+    </LinearLayout>
+>>>>>>> 13c8db7f3380e5609b814723a306224356eac25b
 
 </android.support.constraint.ConstraintLayout>
+</layout>
