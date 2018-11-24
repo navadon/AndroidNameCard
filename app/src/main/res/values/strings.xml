@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="my_name">Burintawat Sittinun</string>
+    <string name="number">Student NO : 570610585</string>
+    <string name="inter">Interesting in UI/UX design</string>
+
+
 </resources>
