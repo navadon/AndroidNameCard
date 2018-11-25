@@ -14,4 +14,7 @@
     <string name="facutyGod">faculty of engineering</string>
     <string name="universityGod">chiangmai university</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="password">password</string>
+    <string name="email">email</string>
+    <string name="login">Login</string>
 </resources>

@@ -1,4 +1,4 @@
-package com.example.navadon.androidnamecard;
+package com.example.navadroid.androiddatabinding;
 
 import android.content.Context;
 import android.support.test.InstrumentationRegistry;
@@ -21,6 +21,6 @@ public class ExampleInstrumentedTest {
         // Context of the app under test.
         Context appContext = InstrumentationRegistry.getTargetContext();
 
-        assertEquals("com.example.navadon.androidnamecard", appContext.getPackageName());
+        assertEquals("com.example.navadroid.androiddatabinding", appContext.getPackageName());
     }
 }

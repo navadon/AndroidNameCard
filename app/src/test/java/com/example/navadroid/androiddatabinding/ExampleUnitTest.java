@@ -1,4 +1,4 @@
-package com.example.navadon.androidnamecard;
+package com.example.navadroid.androiddatabinding;
 
 import org.junit.Test;
 

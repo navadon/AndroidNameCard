@@ -1,94 +1,138 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<!--TODO Step 1: Add layout as root element-->
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
-    <RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools" >
+    <!--TODO Step 2: Add ViewModel variable-->
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.navadroid.androiddatabinding.MainViewModel" />
+    </data>
+    <android.support.constraint.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:paddingLeft="0dp"
-        android:paddingRight="0dp" >
+        tools:context=".MainActivity">
 
-        <ImageView
-            android:id="@+id/imageView"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/ic_launcher" />
+            android:paddingLeft="0dp"
+            android:paddingRight="0dp" >
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                app:srcCompat="@drawable/back_groud" />
 
 
-    </RelativeLayout>
+        </RelativeLayout>
 
-    <RelativeLayout
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/nameKri"
+                android:textSize="30sp"
+                android:id="@+id/kri"
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/lastNameKri"
+                android:textSize="30sp"
+                android:paddingLeft="10dp"
+                android:layout_toRightOf="@+id/kri"
+                android:id="@+id/kachai"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/facutyKri"
+                android:textSize="30sp"
+                android:layout_below="@+id/kri"
+                android:id="@+id/facutyKri"
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/phoneNumberKri"
+                android:textSize="30sp"
+                android:layout_below="@+id/facutyKri"
+                android:id="@+id/phoneNumberKri"
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/universityKri"
+                android:textSize="30sp"
+                android:layout_below="@+id/phoneNumberKri"
+                android:id="@+id/uiversity"
+
+                />
+
+            <ImageView
+                android:id="@+id/profilekri"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:scaleType="centerCrop"
+
+                android:src="@drawable/profille_kri"
+                android:layout_toRightOf="@+id/facutyKri"
+                android:paddingLeft="70dp"
+
+                />
+
+            <Button
+                android:id="@+id/button"
+                android:layout_width="wrap_content"
+                android:layout_height="38dp"
+                android:layout_below="@+id/profilekri"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginStart="200dp"
+                android:layout_marginTop="53dp"
+                android:layout_marginEnd="105dp"
+
+                android:layout_marginBottom="15dp"
+                android:onClick="click"
+                android:text="Like" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="95dp"
+                android:layout_height="54dp"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentBottom="true"
+                android:layout_marginEnd="0dp"
+                android:layout_marginBottom="70dp"
+                android:textSize="20dp"
+                android:text="@{viewmodel.string}" />
+
+
+        </RelativeLayout>
+       <!--
+        <TextView
+        android:id="@+id/tv_display"
+        android:text="@{viewmodel.string}"
+        android:textSize="48sp"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/nameKri"
-            android:textSize="30sp"
-            android:id="@+id/kri"
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/lastNameKri"
-            android:textSize="30sp"
-            android:paddingLeft="10dp"
-            android:layout_toRightOf="@+id/kri"
-            android:id="@+id/kachai"
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/facutyKri"
-            android:textSize="30sp"
-            android:layout_below="@+id/kri"
-            android:id="@+id/facutyKri"
-
-            />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/phoneNumberKri"
-            android:textSize="30sp"
-            android:layout_below="@+id/facutyKri"
-            android:id="@+id/phoneNumberKri"
-
-            />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/universityKri"
-            android:textSize="30sp"
-            android:layout_below="@+id/phoneNumberKri"
-            android:id="@+id/uiversity"
-
-            />
-
-        <ImageView
-            android:id="@+id/profilekri"
-            android:layout_width="200dp"
-            android:layout_height="200dp"
-            android:scaleType="centerCrop"
-            app:srcCompat="@mipmap/profilekri"
-            android:layout_toRightOf="@+id/facutyKri"
-            android:paddingLeft="70dp"
-
-            />
-        <Button
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/uiversity"
-            android:layout_margin="30dp"
-            android:text="swap"
-            android:onClick="swap"
-            android:id="@+id/buttonSwap1"
-            />
-     </RelativeLayout>
-
-</android.support.constraint.ConstraintLayout>
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="click"/>
+        -->
+    </android.support.constraint.ConstraintLayout>
+</layout>
