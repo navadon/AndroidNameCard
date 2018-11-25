@@ -1,11 +1,11 @@
 <resources>
     <string name="app_name">NameCard</string>
-    <string name="name1">NUTTINEE DUANGHONG</string>
+    <string name="name1">NUTTINEE DUANGHONG </string>
     <string name="name2">ROYBURA BURARAK</string>
-    <string name="add1">222/326 D condo campus Suthep Chiang mai,Thailand</string>
-    <string name="add2">Putawan place, Suthep Chiang mai,Thailand</string>
-    <string name="phone1">0837630516</string>
-    <string name="phone2">0933275477</string>
+    <string name="add1">D condo campus Chiang mai,Thailand</string>
+    <string name="add2">Gallery Hill Chiang mai,Thailand</string>
+    <string name="age1">22/5</string>
+    <string name="age2">22/4</string>
     <string name="email1">d.nuttinee@hotmail.com</string>
     <string name="email2">roybura.b@gmail.com</string>
 </resources>
