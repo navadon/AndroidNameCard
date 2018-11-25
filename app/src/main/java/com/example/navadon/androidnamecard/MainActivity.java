@@ -68,7 +68,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void engToThai() {
-        viewModel.setAddress("ชั้น 4 อาคาร 30 ปี\\nคณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่\\nอีเมล: supakarn_chaidaroon@cmu.ac.th");
+        viewModel.setAddress("ชั้น 4 อาคาร 30 ปี\nคณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่\nอีเมล: supakarn_chaidaroon@cmu.ac.th");
         viewModel.setDepname("ภาควิชาวิศวกรรมคอมพิวเตอร์");
         viewModel.setMyname("ศุภการ  ชัยดรุณ");
         viewModel.setSubname("นักศึกษาชั้นปีที่ 4");
@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void thaiToEng() {
-        viewModel.setAddress("4th Floor, 30 Years Building\\nFaculty of Engineering, Chiang Mai University\\nEmail: supakarn_chaidaroon@cmu.ac.th");
+        viewModel.setAddress("4th Floor, 30 Years Building\nFaculty of Engineering, Chiang Mai University\nEmail: supakarn_chaidaroon@cmu.ac.th");
         viewModel.setDepname("Department of Computer Engineering");
         viewModel.setMyname("Supakarn Chaidaroon");
         viewModel.setSubname("4th year student");

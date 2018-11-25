@@ -23,11 +23,11 @@ public class MainViewModel extends ViewModel {
         this.depname = "Department of Computer Engineering";
         this.myname = "Supakarn Chaidaroon";
         this.subname = "4th year student";
-        this.address = "4th Floor, 30 Years Building\\nFaculty of Engineering, Chiang Mai University\\nEmail: supakarn_chaidaroon@cmu.ac.th";
+        this.address = "4th Floor, 30 Years Building\nFaculty of Engineering, Chiang Mai University\nEmail: supakarn_chaidaroon@cmu.ac.th";
         this.depnameth = "ภาควิชาวิศวกรรมคอมพิวเตอร์";
         this.mynameth = "ศุภการ  ชัยดรุณ";
         this.subnameth = "นักศึกษาชั้นปีที่ 4";
-        this.addressth = "ชั้น 4 อาคาร 30 ปี\\nคณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่\\nอีเมล: supakarn_chaidaroon@cmu.ac.th";
+        this.addressth = "ชั้น 4 อาคาร 30 ปี\nคณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่\nอีเมล: supakarn_chaidaroon@cmu.ac.th";
     }
 
     public String getDepname() {
