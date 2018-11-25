@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<layout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.navadon.androidnamecard.MainBillyViewModel" />
+    </data>
+    <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    xmlns:tools="http://schemas.android.com/tools"
     tools:context=".MainBilly">
 
     <RelativeLayout
@@ -33,8 +39,17 @@
             android:layout_height="@dimen/height_pic"
             android:layout_marginTop="@dimen/margin_top4"
             android:layout_marginBottom="@dimen/margin_top1"
-            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
             app:srcCompat="@mipmap/picbilly" />
+
+        <ImageView
+            android:id="@+id/imgMark"
+            android:layout_width="@dimen/width_card"
+            android:layout_height="@dimen/height_pic"
+            android:layout_marginTop="@dimen/margin_top4"
+            android:layout_marginBottom="@dimen/margin_top1"
+            android:layout_marginRight="100dp"
+            app:srcCompat="@mipmap/picmark" />
 
 
         <TextView
@@ -126,9 +141,9 @@
         android:layout_height="wrap_content"
         android:layout_below="@+id/relativeLayout1"
         android:layout_centerHorizontal="true"
-        android:text="@string/next" />
-
-
-</RelativeLayout>
+        android:text="@string/next"
+        android:onClick="click"/>
+    </RelativeLayout>
+</layout>
 
 
