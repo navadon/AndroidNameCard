@@ -10,8 +10,8 @@ import com.example.navadon.androidnamecard.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private int check = 0;
-    private View.OnClickListener onClickListener;
+    //private int check = 0;
+    //private View.OnClickListener onClickListener;
 
     // Step 1 //
     private MainViewModel viewModel;
@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView(){
-      //  initOnClickListener();
+        //initOnClickListener();
         // To register click event to view
-       // findViewById(R.id.btn_change).setOnClickListener(onClickListener);
+        // findViewById(R.id.btn_change).setOnClickListener(onClickListener);
 
         // Step 2 //
         viewModel = new MainViewModel();
@@ -35,6 +35,7 @@ public class MainActivity extends AppCompatActivity {
         binding.setViewmodel(viewModel);
     }
 
+    /*
     private void initOnClickListener(){
         // Only one OnclickListener is created to handle all onClick events.
         onClickListener = new View.OnClickListener() {
@@ -50,17 +51,17 @@ public class MainActivity extends AppCompatActivity {
             }
         };
     }
+    */
 
     public void click (View View){
-//        long time = System.currentTimeMillis();
-//        if(time%2==0)
-//            viewModel.setString("even");
-//        else
-//            viewModel.setString("odd");
-        viewModel.setName("-------------------------------------");
-        viewModel.setId("Welcome Tenno");
-        viewModel.setEmail("Email: -------------------------------------------------------");
-        viewModel.setPhone("Phone: --------------------------------");
+        long time = System.currentTimeMillis();
+        if(time%2==0)
+            setDataViewModel(getResources().getString(R.string.name),  getResources().getString(R.string.idCode),
+                    getResources().getString(R.string.email), getResources().getString(R.string.phone));
+       else
+            setDataViewModel(getResources().getString(R.string.name2),  getResources().getString(R.string.idCode2),
+                    getResources().getString(R.string.email2), getResources().getString(R.string.phone2));
+
         // Step 3 //
         binding.name.setText(viewModel.getName());
         binding.idCode.setText(viewModel.getId());
@@ -68,6 +69,13 @@ public class MainActivity extends AppCompatActivity {
         binding.phone.setText(viewModel.getPhone());
     }
 
+    private void setDataViewModel(String name, String id, String email, String phone){
+        viewModel.setName(name);
+        viewModel.setId(id);
+        viewModel.setEmail(email);
+        viewModel.setPhone(phone);
+    }
+    /*
     private void changeInformation(int check){
 
         TextView name = findViewById(R.id.name);
@@ -86,6 +94,6 @@ public class MainActivity extends AppCompatActivity {
             email.setText(getResources().getString(R.string.email));
             phone.setText(getResources().getString(R.string.phone));
         }
-
     }
+    */
 }

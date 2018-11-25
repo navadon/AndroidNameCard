@@ -1,5 +1,4 @@
 package com.example.navadon.androidnamecard;
-
 import android.arch.lifecycle.ViewModel;
 
 public class MainViewModel extends ViewModel {
@@ -10,10 +9,10 @@ public class MainViewModel extends ViewModel {
     private String phone;
 
     public MainViewModel() {
-        this.name = "Kanokwan Pinthong";
-        this.id = "580610619";
-        this.email = "Email: Tenno_Warframe@gmail.com";
-        this.phone = "Phone: 093-XXXXXXX";
+        this.name = "-------------------------------------";
+        this.id = "Welcome Tenno";
+        this.email = "Email: -------------------------------------------------------";
+        this.phone = "Phone: --------------------------------";
     }
 
     public String getName() {

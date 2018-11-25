@@ -4,9 +4,16 @@
     <string name="idCode">580610615</string>
     <string name="email">Email: Tenno_Warframe@gmail.com</string>
     <string name="phone">Phone: 093-XXXXXXX</string>
+    <string name="name2">Kittiphon  Kanjina</string>
+    <string name="idCode2">580610619</string>
+    <string name="email2">Email: Tenno_Warframe2@gmail.com</string>
+    <string name="phone2">Phone: 094-XXXXXXX</string>
+
     <string name="btn_change">Change Information</string>
+
     <string name="_name">-------------------------------------</string>
     <string name="_idCode">"Welcome Tenno"</string>
     <string name="_email">Email: -------------------------------------------------------</string>
     <string name="_phone">Phone: --------------------------------</string>
+
 </resources>
