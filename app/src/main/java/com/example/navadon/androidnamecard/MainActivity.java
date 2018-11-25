@@ -1,15 +1,17 @@
 package com.example.navadon.androidnamecard;
 
-import android.support.v7.app.AppCompatActivity;
+import android.databinding.DataBindingUtil;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
-import android.widget.TextView;
+
+import com.example.navadon.androidnamecard.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView eMail,phone,age,bd,bdth;
     public int temp=0 ;
-
+    private Model viewModel;
+    ActivityMainBinding binding ;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,14 +21,16 @@ public class MainActivity extends AppCompatActivity {
 
     public void process(View v){
         if(temp == 0){
-            if(v.getId() == R.id.Chang) {
+            if(v.getId() == R.id.Chang ) {
                 setThai();
+                binding.setModel(viewModel);
                 temp+=1 ;
             }
         }
         else {
             if(v.getId() == R.id.Chang) {
                 setEng();
+                binding.setModel(viewModel);
                 temp-=1 ;
             }
         }
@@ -34,26 +38,24 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void bindView() {
-        eMail = findViewById(R.id.email);
-        phone = findViewById(R.id.phone);
-        age = findViewById(R.id.age);
-        bd = findViewById(R.id.bd);
-        bdth = findViewById(R.id.bdth);
+        viewModel = new Model();
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setModel(viewModel);
     }
 
     public void setThai(){
-        eMail.setText(R.string.Emailthai);
-        phone.setText(R.string.Phonethai);
-        age.setText(R.string.Agethai);
-        bd.setText(R.string.Date_Of_Birthdaythai);
-        bdth.setText(R.string.Date_Of_BirthdayThaiis);
+        viewModel.setFirstName("ภคิน ชูเกียรติขจร");
+        viewModel.setAge("อายุ : ");
+        viewModel.setBdate("วัดเกิด : ");
+        viewModel.setPhone("เบอร์ : ");
+        viewModel.setSbdate("25/5/2540");
     }
 
     public void setEng(){
-        eMail.setText(R.string.Email);
-        phone.setText(R.string.Phone);
-        age.setText(R.string.Age);
-        bd.setText(R.string.Date_Of_Birthday);
-        bdth.setText(R.string.Date_Of_Birthdayis);
+        viewModel.setFirstName("Phakin Chukiatkajohn");
+        viewModel.setAge("Age : ");
+        viewModel.setBdate("Birthday : ");
+        viewModel.setPhone("Phone : ");
+        viewModel.setSbdate("25/5/1997");
     }
 }
