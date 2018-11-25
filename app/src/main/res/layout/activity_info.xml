@@ -1,133 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".InfoActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <android.support.constraint.Guideline
-        android:id="@+id/guideline0"
-        android:layout_width="wrap_content"
+    <data>
+        <variable
+            name="viewmodel"
+            type="com.example.navadon.androidnamecard.ActivityInfoView" />
+    </data>
+
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        app:layout_constraintGuide_percent="0.15" />
+        tools:context=".InfoActivity">
 
-    <ImageView
-        android:src="@drawable/ic_call_24dp"
-        android:layout_width="@dimen/zero"
-        android:layout_height="@dimen/zero"
-        android:background="@color/colorBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewNum0"
-        app:layout_constraintEnd_toStartOf="@id/textViewNum0"
-        app:layout_constraintBottom_toBottomOf="@id/textViewNum1"/>
+        <android.support.constraint.Guideline
+            android:id="@+id/guideline0"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            app:layout_constraintGuide_percent="0.15" />
 
-    <TextView
-        android:id="@+id/textViewNum0"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:text="@string/phoneNumberTitle"
-        android:textSize="@dimen/text"
-        android:background="@color/colorAccent"
-        android:padding="@dimen/textPadding"
-        app:layout_constraintBottom_toTopOf="@+id/textViewEmail0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline0"
-        app:layout_constraintTop_toTopOf="parent" />
+        <ImageView
+            android:src="@drawable/ic_call_24dp"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:background="@color/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewNum0"
+            app:layout_constraintEnd_toStartOf="@id/textViewNum0"
+            app:layout_constraintBottom_toBottomOf="@id/textViewNum1"/>
 
-    <TextView
-        android:id="@+id/textViewNum1"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:textSize="@dimen/text"
-        android:text="@string/phoneNumber"
-        android:padding="@dimen/textPadding"
-        app:layout_constraintTop_toBottomOf="@id/textViewNum0"
-        app:layout_constraintStart_toEndOf="@id/guideline0"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textViewNum0"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.titlePhoneNum}"
+            android:textSize="@dimen/text"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/textPadding"
+            app:layout_constraintBottom_toTopOf="@+id/textViewEmail0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline0"
+            app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:src="@drawable/ic_email_24dp"
-        android:layout_width="@dimen/zero"
-        android:layout_height="@dimen/zero"
-        android:background="@color/colorBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewEmail0"
-        app:layout_constraintEnd_toStartOf="@id/textViewEmail0"
-        app:layout_constraintBottom_toBottomOf="@id/textViewEmail1"/>
+        <TextView
+            android:id="@+id/textViewNum1"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/text"
+            android:text="@{viewmodel.phoneNum}"
+            android:padding="@dimen/textPadding"
+            app:layout_constraintTop_toBottomOf="@id/textViewNum0"
+            app:layout_constraintStart_toEndOf="@id/guideline0"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewEmail0"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:text="@string/emailTitle"
-        android:textSize="@dimen/text"
-        android:background="@color/colorAccent"
-        android:padding="@dimen/textPadding"
-        app:layout_constraintBottom_toTopOf="@+id/textViewAddr0"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline0"
-        app:layout_constraintTop_toBottomOf="@+id/textViewNum0" />
+        <ImageView
+            android:src="@drawable/ic_email_24dp"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:background="@color/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewEmail0"
+            app:layout_constraintEnd_toStartOf="@id/textViewEmail0"
+            app:layout_constraintBottom_toBottomOf="@id/textViewEmail1"/>
 
-    <TextView
-        android:id="@+id/textViewEmail1"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:textSize="@dimen/text"
-        android:text="@string/email"
-        android:padding="@dimen/textPadding"
-        app:layout_constraintTop_toBottomOf="@id/textViewEmail0"
-        app:layout_constraintStart_toEndOf="@id/guideline0"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textViewEmail0"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:text="@{viewmodel.titleEmail}"
+            android:textSize="@dimen/text"
+            android:background="@color/colorAccent"
+            android:padding="@dimen/textPadding"
+            app:layout_constraintBottom_toTopOf="@+id/textViewAddr0"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline0"
+            app:layout_constraintTop_toBottomOf="@+id/textViewNum0" />
 
-    <ImageView
-        android:src="@drawable/ic_location_24dp"
-        android:layout_width="@dimen/zero"
-        android:layout_height="@dimen/zero"
-        android:background="@color/colorBar"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/textViewAddr0"
-        app:layout_constraintEnd_toStartOf="@id/textViewAddr0"
-        app:layout_constraintBottom_toBottomOf="@id/textViewAddr1"/>
+        <TextView
+            android:id="@+id/textViewEmail1"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/text"
+            android:text="@{viewmodel.email}"
+            android:padding="@dimen/textPadding"
+            app:layout_constraintTop_toBottomOf="@id/textViewEmail0"
+            app:layout_constraintStart_toEndOf="@id/guideline0"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-    <TextView
-        android:id="@+id/textViewAddr0"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:background="@color/colorAccent"
-        android:textSize="@dimen/text"
-        android:text="@string/addressTitle"
-        android:padding="@dimen/textPadding"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/guideline0"
-        app:layout_constraintTop_toBottomOf="@+id/textViewEmail0" />
+        <ImageView
+            android:src="@drawable/ic_location_24dp"
+            android:layout_width="@dimen/zero"
+            android:layout_height="@dimen/zero"
+            android:background="@color/colorBar"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/textViewAddr0"
+            app:layout_constraintEnd_toStartOf="@id/textViewAddr0"
+            app:layout_constraintBottom_toBottomOf="@id/textViewAddr1"/>
 
-    <TextView
-        android:id="@+id/textViewAddr1"
-        android:layout_width="@dimen/zero"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        android:textSize="@dimen/text"
-        android:text="@string/address"
-        android:padding="@dimen/textPadding"
-        app:layout_constraintTop_toBottomOf="@id/textViewAddr0"
-        app:layout_constraintStart_toEndOf="@id/guideline0"
-        app:layout_constraintEnd_toEndOf="parent" />
+        <TextView
+            android:id="@+id/textViewAddr0"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:background="@color/colorAccent"
+            android:textSize="@dimen/text"
+            android:text="@{viewmodel.titleAddr}"
+            android:padding="@dimen/textPadding"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/guideline0"
+            app:layout_constraintTop_toBottomOf="@+id/textViewEmail0" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/buttonMargin"
-        android:layout_marginEnd="@dimen/buttonMargin"
-        android:text="@string/buttonLang"
-        android:backgroundTint="@color/colorBar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        <TextView
+            android:id="@+id/textViewAddr1"
+            android:layout_width="@dimen/zero"
+            android:layout_height="wrap_content"
+            android:background="@color/colorPrimary"
+            android:textSize="@dimen/text"
+            android:text="@{viewmodel.addr}"
+            android:padding="@dimen/textPadding"
+            app:layout_constraintTop_toBottomOf="@id/textViewAddr0"
+            app:layout_constraintStart_toEndOf="@id/guideline0"
+            app:layout_constraintEnd_toEndOf="parent" />
 
-
-</android.support.constraint.ConstraintLayout>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/buttonMargin"
+            android:layout_marginEnd="@dimen/buttonMargin"
+            android:text="@string/buttonLang"
+            android:backgroundTint="@color/colorBar"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </android.support.constraint.ConstraintLayout>
+</layout>
