@@ -9,15 +9,20 @@ import android.view.inputmethod.InputMethodManager;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.databinding.DataBindingUtil;
+
+import com.example.navadon.androidnamecard.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
     private Button about_button;
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        //setContentView(R.layout.activity_main);
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
         bindView();
     }
 
