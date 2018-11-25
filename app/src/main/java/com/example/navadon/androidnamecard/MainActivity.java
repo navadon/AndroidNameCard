@@ -25,9 +25,9 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void initView(){
-        initOnClickListener();
+      //  initOnClickListener();
         // To register click event to view
-        findViewById(R.id.btn_change).setOnClickListener(onClickListener);
+       // findViewById(R.id.btn_change).setOnClickListener(onClickListener);
 
         // Step 2 //
         viewModel = new MainViewModel();
@@ -52,14 +52,20 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void click (View View){
-        long time = System.currentTimeMillis();
-        if(time%2==0)
-            viewModel.setString("even");
-        else
-            viewModel.setString("odd");
-
+//        long time = System.currentTimeMillis();
+//        if(time%2==0)
+//            viewModel.setString("even");
+//        else
+//            viewModel.setString("odd");
+        viewModel.setName("-------------------------------------");
+        viewModel.setId("Welcome Tenno");
+        viewModel.setEmail("Email: -------------------------------------------------------");
+        viewModel.setPhone("Phone: --------------------------------");
         // Step 3 //
-        binding.name.setText(viewModel.getString());
+        binding.name.setText(viewModel.getName());
+        binding.idCode.setText(viewModel.getId());
+        binding.email.setText(viewModel.getEmail());
+        binding.phone.setText(viewModel.getPhone());
     }
 
     private void changeInformation(int check){
