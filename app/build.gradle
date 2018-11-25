@@ -16,6 +16,11 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
+
+//    TODO Step 1: Enable data binding
+    dataBinding {
+        enabled = true
+    }
 }
 
 dependencies {
@@ -25,4 +30,6 @@ dependencies {
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    //    TODO Step 2: Add implementation
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
 }

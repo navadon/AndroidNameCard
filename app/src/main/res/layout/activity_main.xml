@@ -1,91 +1,100 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/bg1"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
+    <data>
+        <variable
+            name="data"
+            type="com.example.navadon.androidnamecard.ViewModels" />
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/bg1"
+        tools:context=".MainActivity">
 
 
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="@dimen/pic_size"
-        android:layout_height="@dimen/pic_size"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:contentDescription="@string/mypicture"
-        app:srcCompat="@drawable/testpic"
-        tools:layout_editor_absoluteX="116dp"
-        tools:layout_editor_absoluteY="52dp" />
+        <ImageView
+            android:id="@+id/imageView2"
+            android:layout_width="@dimen/pic_size"
+            android:layout_height="@dimen/pic_size"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp"
+            android:contentDescription="@string/mypicture"
+            app:srcCompat="@drawable/testpic"
+            tools:layout_editor_absoluteX="116dp"
+            tools:layout_editor_absoluteY="52dp" />
 
 
-    <LinearLayout
+        <LinearLayout
 
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="153dp"
-        android:gravity="center_horizontal"
-        android:background="@color/yellow"
-        android:orientation="vertical">
-
-
-        <TextView
-            android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/my_name"
-            android:textAlignment="center"
-            android:textSize="@dimen/text_size"
-            android:textColor="@color/blue_text"
-            android:textStyle="bold"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="153dp"
+            android:gravity="center_horizontal"
+            android:background="@color/yellow"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@{data.FullName}"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size"
+                android:textColor="@color/blue_text"
+                android:textStyle="bold"
+                />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_weight="1"
+                android:text="@{data.MobileandAge}"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/my_email"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/my_fb"
+                android:textAlignment="center"
+                android:textSize="@dimen/text_size" />
+
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button_to_profile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="64dp"
+            android:text="@string/to_profile"
+            android:onClick="process"
+
             />
 
-        <TextView
-            android:id="@+id/textView3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
 
-            android:layout_weight="1"
-            android:text="@string/my_mobile"
-            android:textAlignment="center"
-            android:textSize="@dimen/text_size" />
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_email"
-            android:textAlignment="center"
-            android:textSize="@dimen/text_size" />
-
-        <TextView
-            android:id="@+id/textView5"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/my_fb"
-            android:textAlignment="center"
-            android:textSize="@dimen/text_size" />
-
-
-    </LinearLayout>
-
-    <Button
-        android:id="@+id/button_to_profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="64dp"
-        android:text="@string/to_profile"
-        android:onClick="process"
-
-        />
-
-
-</RelativeLayout>
+    </RelativeLayout>
+</layout>
