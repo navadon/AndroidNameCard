@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Android Name Card</string>
+    <string name="Logo">Logo</string>
+    <string name="change">Change</string>
+    <string name="Profile">Profile</string>
+    <string name="name">name</string>
+    <string name="phone">phone</string>
+    <string name="email">email</string>
+    <string name="address">address</string>
 </resources>
