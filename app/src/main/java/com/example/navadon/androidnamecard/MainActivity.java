@@ -1,9 +1,12 @@
 package com.example.navadon.androidnamecard;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
+
+import com.example.navadon.androidnamecard.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -19,6 +22,13 @@ public class MainActivity extends AppCompatActivity {
 
     private void initView() {
         initOnClickListener();
+
+        BackActivityViewModel backActivityViewModel = new BackActivityViewModel();
+
+        ActivityMainBinding activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        activityMainBinding.setModel2(backActivityViewModel);
+
+        backActivityViewModel.setBackflip("tap info to flip");
 
         findViewById(R.id.layoutInfo).setOnClickListener(onClickListener);
     }
@@ -37,7 +47,7 @@ public class MainActivity extends AppCompatActivity {
     }
 
     private void startFront() {
-        startActivity(new Intent(this,FrontActivity.class));
+        startActivity(new Intent(this, FrontActivity.class));
         finish();
     }
 }
