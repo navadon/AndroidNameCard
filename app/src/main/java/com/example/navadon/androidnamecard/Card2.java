@@ -1,16 +1,36 @@
 package com.example.navadon.androidnamecard;
 
 import android.content.Intent;
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 
+import com.example.navadon.androidnamecard.databinding.Card2Binding;
+
 public class Card2 extends AppCompatActivity {
+
+    private Card2ViewModel viewModel;
+
+    Card2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.card2);
+        InitBinding();
+    }
+
+    private void InitBinding() {
+        viewModel = new Card2ViewModel();
+        binding = DataBindingUtil.setContentView(this, R.layout.card2);
+        binding.setModel(viewModel);
+
+        viewModel.setFname("KAIWIT");
+        viewModel.setLname("MANEEWONG");
+        viewModel.setPosition("FRONTEND DEVELOPER");
+        viewModel.setEmail("Kaiwit.maneewong@gmail.com");
+        viewModel.setPhone("091 - 0377157");
     }
 
     @Override
