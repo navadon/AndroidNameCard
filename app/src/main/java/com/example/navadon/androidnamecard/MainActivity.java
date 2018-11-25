@@ -1,5 +1,6 @@
 package com.example.navadon.androidnamecard;
 
+import android.databinding.DataBindingUtil;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.CardView;
@@ -7,56 +8,45 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import com.example.navadon.androidnamecard.databinding.ActivityMainBindingImpl;
+
 public class MainActivity extends AppCompatActivity {
 
-    CardView cardView;
-    Button button;
-    private View.OnClickListener onClickListener;
-    Boolean aboolean = true;
+    private MainViewModel viewModel;
+    ActivityMainBindingImpl binding;
+    private Boolean state = true;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        bindView();
         initView();
     }
 
-    private void bindView() {
-        cardView = findViewById(R.id.cardview);
+    private void initView() {
+        viewModel = new MainViewModel();
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setViewmodel(viewModel);
         button = findViewById(R.id.btn);
     }
 
-    private void initView() {
-        initOnClickListener();
-
-        findViewById(R.id.btn).setOnClickListener(onClickListener);
-    }
-
-    private void initOnClickListener() {
-        onClickListener = new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                switch (view.getId()) {
-                    case R.id.btn:
-                        showData();
-                        break;
-                }
-            }
-        };
-    }
-
-    private void showData() {
-       if (aboolean == true){
-           cardView.setVisibility(View.VISIBLE);
-           button.setText(getString(R.string.hide_data));
-           aboolean = false;
-       }else if (aboolean ==false){
-           cardView.setVisibility(View.INVISIBLE);
-           button.setText(getString(R.string.show_data));
-           aboolean = true;
-       }
+    public void onClick(View v){
+        if (state == true){
+            button.setText("Show More Info");
+            viewModel.setString("Tanawat Klomklom " + "\n" + "First");
+            binding.tvInfo.setText(viewModel.getString());
+            state = false;
+        }else if (state == false){
+            button.setText("Show Less Info");
+            viewModel.setString("Tanawat Klomklom " + "\n" + "First"
+                    + "\n" + "580610645"
+                    + "\n" + "CPE24"
+                    + "\n" + "Mobile Application development");
+            binding.tvInfo.setText(viewModel.getString());
+            state = true;
+        }
     }
 
 }
