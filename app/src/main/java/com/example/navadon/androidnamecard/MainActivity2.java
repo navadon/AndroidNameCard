@@ -7,14 +7,14 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import com.example.navadon.androidnamecard.databinding.ActivityMainBinding;
+import com.example.navadon.androidnamecard.databinding.ActivityMain2Binding;
 
 
 public class MainActivity2 extends AppCompatActivity {
 
     private Button btn_contact;
 
-    private ActivityMainBinding binding;
+    private ActivityMain2Binding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
