@@ -1,17 +1,3 @@
 <resources>
     <string name="app_name">Android Name Card</string>
-
-
-    <string name="dep_name">Department of Computer Engineering</string>
-    <string name="my_name">Supakarn Chaidaroon</string>
-    <string name="sub_name">4th year student</string>
-    <string name="address">4th Floor, 30 Years Building\nFaculty of Engineering, Chiang Mai University\nEmail: supakarn_chaidaroon@cmu.ac.th</string>
-
-    <string name="dep_nameth">ภาควิชาวิศวกรรมคอมพิวเตอร์</string>
-    <string name="my_nameth">ศุภการ  ชัยดรุณ</string>
-    <string name="sub_nameth">นักศึกษาชั้นปีที่ 4</string>
-    <string name="addressth">ชั้น 4 อาคาร 30 ปี\nคณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่\nอีเมล: supakarn_chaidaroon@cmu.ac.th</string>
-
-    <string name="en">EN</string>
-    <string name="th">TH</string>
 </resources>

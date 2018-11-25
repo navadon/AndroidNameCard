@@ -1,25 +1,32 @@
 package com.example.navadon.androidnamecard;
 
+import android.databinding.DataBindingUtil;
 import android.graphics.Typeface;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import com.example.navadon.androidnamecard.databinding.ActivityMainBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private TextView depTV;
-    private TextView nameTV;
-    private TextView subnameTV;
-    private TextView addressTV;
+//    private TextView depTV;
+//    private TextView nameTV;
+//    private TextView subnameTV;
+//    private TextView addressTV;
     private TextView enTV;
     private TextView thTV;
+
+    private MainViewModel viewModel;
+
+    ActivityMainBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        bindView();
+        bindview();
+        initView();
     }
 
     @Override
@@ -41,13 +48,15 @@ public class MainActivity extends AppCompatActivity {
                         | View.SYSTEM_UI_FLAG_FULLSCREEN);
     }
 
-    private void bindView() {
-        depTV = findViewById(R.id.dep_text_view);
-        nameTV = findViewById(R.id.name_text_view);
-        subnameTV = findViewById(R.id.subname_text_view);
-        addressTV = findViewById(R.id.address_text_view);
+    private void bindview(){
         enTV = findViewById(R.id.en_text_view);
         thTV = findViewById(R.id.th_text_view);
+    }
+
+    private void initView() {
+        viewModel = new MainViewModel();
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        binding.setModel(viewModel);
     }
 
     public void setEN(View v) {
@@ -59,10 +68,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void engToThai() {
-        depTV.setText(getString(R.string.dep_name));
-        nameTV.setText(getString(R.string.my_name));
-        subnameTV.setText(getString(R.string.sub_name));
-        addressTV.setText(getString(R.string.address));
+        viewModel.setAddress("ชั้น 4 อาคาร 30 ปี\\nคณะวิศวกรรมศาสตร์ มหาวิทยาลัยเชียงใหม่\\nอีเมล: supakarn_chaidaroon@cmu.ac.th");
+        viewModel.setDepname("ภาควิชาวิศวกรรมคอมพิวเตอร์");
+        viewModel.setMyname("ศุภการ  ชัยดรุณ");
+        viewModel.setSubname("นักศึกษาชั้นปีที่ 4");
     }
 
     public void setTH(View v) {
@@ -74,10 +83,10 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void thaiToEng() {
-        depTV.setText(getString(R.string.dep_nameth));
-        nameTV.setText(getString(R.string.my_nameth));
-        subnameTV.setText(getString(R.string.sub_nameth));
-        addressTV.setText(getString(R.string.addressth));
+        viewModel.setAddress("4th Floor, 30 Years Building\\nFaculty of Engineering, Chiang Mai University\\nEmail: supakarn_chaidaroon@cmu.ac.th");
+        viewModel.setDepname("Department of Computer Engineering");
+        viewModel.setMyname("Supakarn Chaidaroon");
+        viewModel.setSubname("4th year student");
     }
 
 }
