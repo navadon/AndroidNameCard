@@ -1,3 +1,4 @@
 <resources>
-    <string name="app_name">Android Name Card</string>
+    <string name="app_name">Namecard2</string>
+    <string name="title_activity_main3">Main3Activity</string>
 </resources>
