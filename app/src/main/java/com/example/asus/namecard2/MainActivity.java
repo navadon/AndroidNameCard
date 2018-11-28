@@ -11,21 +11,41 @@ import android.widget.TextView;
 import android.content.Context;
 import android.content.Intent;
 import com.example.asus.namecard2.databinding.ActivityMainBinding;
+import com.example.asus.namecard2.model.User;
+import com.example.asus.namecard2.model.User2;
+import com.example.asus.namecard2.viewmodel.User2Model;
 import com.example.asus.namecard2.viewmodel.UserModel;
+
+
 
 public class MainActivity extends AppCompatActivity {
 
 
-    private ActivityMainBinding activityMainBinding;
+    //public
+    public ActivityMainBinding activityMainBinding;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         //setContentView(R.layout.activity_main);
-        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
 
-        UserModel userModel = new UserModel();
-        userModel.setMobile("0878660082");
+        activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
+        User user = new User();
+        user.setName("Name : Perawit Samart");
+        user.setYears("4th year Student  ");
+        user.setMobile("0878660082");
+        user.setEmail("peechdevil@gmail.com");
+        user.setNickname(" Peech ");
+
+
+        UserModel userModel = new UserModel(user);
         activityMainBinding.setPeech(userModel);
+
+       // UserModel userModel = new UserModel();
+       // userModel.setMobile(userModel.mobile);
+        //userModel.setEmail("p" + userModel.getEmail());
+        //activityMainBinding.setPeech(userModel);
+
 
 
     }
@@ -35,5 +55,7 @@ public class MainActivity extends AppCompatActivity {
             Intent intent = new Intent(MainActivity.this,Main2Activity.class);
             startActivity(intent);
         }
+
     }
+
 }

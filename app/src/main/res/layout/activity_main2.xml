@@ -7,6 +7,7 @@
         <variable
             name="job"
             type="com.example.asus.namecard2.viewmodel.User2Model"/>
+
     </data>
 
 
@@ -49,13 +50,13 @@
 
     <TextView
         android:id="@+id/textView27"
-        android:layout_width="140dp"
+        android:layout_width="170dp"
         android:layout_height="30dp"
         android:layout_marginBottom="8dp"
         android:layout_marginEnd="45dp"
         android:layout_marginStart="51dp"
         android:layout_marginTop="2dp"
-        android:text="4th year Student  "
+        android:text="@{job.years}"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView28"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -82,7 +83,7 @@
         android:layout_marginEnd="75dp"
         android:layout_marginStart="75dp"
         android:layout_marginTop="16dp"
-        android:text="JOB"
+        android:text="@{job.nickname}"
         android:textSize="36sp"
         app:layout_constraintBottom_toTopOf="@+id/textView26"
         app:layout_constraintEnd_toStartOf="@+id/imageView"
@@ -113,7 +114,7 @@
         android:layout_marginEnd="78dp"
         android:layout_marginStart="14dp"
         android:layout_marginTop="4dp"
-        android:text="Thanakorn Panyakong"
+        android:text="@{job.name}"
         android:textColor="@android:color/background_dark"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView33"
@@ -157,7 +158,7 @@
         android:layout_marginBottom="20dp"
         android:layout_marginEnd="34dp"
         android:layout_marginStart="14dp"
-        android:text="Thanakorn_job@hotmail.com"
+        android:text="@{job.mobile}"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView25"
         app:layout_constraintEnd_toEndOf="parent"
@@ -228,6 +229,7 @@
         android:id="@+id/btn_perawit"
         android:layout_width="377dp"
         android:layout_height="57dp"
+        android:layout_marginBottom="32dp"
         android:layout_marginEnd="3dp"
         android:layout_marginStart="4dp"
         android:layout_marginTop="15dp"
@@ -235,17 +237,19 @@
         android:text="Go To Perawit"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView31" />
 
-    <EditText
+    <TextView
         android:id="@+id/textView33"
         android:layout_width="184dp"
-        android:layout_height="28dp"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="16dp"
         android:layout_marginEnd="79dp"
         android:layout_marginStart="36dp"
-        android:text="@={job.mobile}"
+        android:singleLine="true"
+        android:text="@{job.mobile}"
         android:textSize="18sp"
         app:layout_constraintBottom_toTopOf="@+id/textView24"
         app:layout_constraintEnd_toEndOf="parent"
