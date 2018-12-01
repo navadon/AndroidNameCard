@@ -99,7 +99,7 @@ public class SignInActivity extends AppCompatActivity implements
     private void updateUI(@Nullable GoogleSignInAccount account) {
         if (account != null) {
 
-            // You can use this section for redirect to profile page.
+            // TODO You can use this section for redirect to profile page.
 
             Context context = getApplicationContext();
             String text = account.getDisplayName();
