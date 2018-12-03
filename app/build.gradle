@@ -35,9 +35,10 @@ dependencies {
     // view model
     implementation "android.arch.lifecycle:extensions:$LifeCycleVersion"
     annotationProcessor "android.arch.lifecycle:compiler:$LifeCycleVersion"
-    implementation "com.google.android.gms:play-services-auth:$GmsVersion"
     // firebase
     implementation 'com.google.firebase:firebase-auth:16.0.5'
     implementation 'com.google.android.gms:play-services-auth:16.0.1'
 
 }
+
+apply plugin: 'com.google.gms.google-services'
