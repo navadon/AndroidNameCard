@@ -79,8 +79,8 @@ public class SignInActivity extends AppCompatActivity implements
     public void onStart() {
         super.onStart();
         // Check if user is signed in (non-null) and update UI.
-        FirebaseUser currentUser = mFirebaseClient.getCurrentUser();
-        updateUI(currentUser);
+//        FirebaseUser currentUser = mFirebaseClient.getCurrentUser();
+//        updateUI(currentUser);
     }
 
     @Override
@@ -114,6 +114,7 @@ public class SignInActivity extends AppCompatActivity implements
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mFirebaseClient.getCurrentUser();
                             updateUI(user);
+                            // TODO 1. Mos should read method to use in other activity
                             manageRoute(user.getUid(),account.getGivenName(),account.getFamilyName(),account.getEmail());
                         } else {
                             // If sign in fails, display a message to the user.
@@ -126,15 +127,12 @@ public class SignInActivity extends AppCompatActivity implements
 
     private void updateUI(FirebaseUser account) {
         if (account != null) {
+            Context context = getApplicationContext();
+            String text = account.getDisplayName();
+            int duration = Toast.LENGTH_SHORT;
 
-            // TODO You can use this section for redirect to profile page.
-
-//            Context context = getApplicationContext();
-//            String text = account.getDisplayName();
-//            int duration = Toast.LENGTH_SHORT;
-//
-//            Toast toast = Toast.makeText(context, text, duration);
-//            toast.show();
+            Toast toast = Toast.makeText(context, text, duration);
+            toast.show();
         } else {
             Context context = getApplicationContext();
             String text = "Please Login with Google Account";
@@ -173,24 +171,31 @@ public class SignInActivity extends AppCompatActivity implements
     }
 
     private void manageRoute(final String userId, final String firstname, final String lastname, final String email){
-        mFirebaseDatabase.child("users").child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+        mFirebaseDatabase.child("users").addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                     if(dataSnapshot.child(userId).exists()){
-                        Context context = getApplicationContext();
-                        String text = "ยังไม่มีจ้า";
-                        int duration = Toast.LENGTH_SHORT;
+                        // TODO 2. if userId exist in database - move to profile activity
+                        // you can use usedId , firstname , lastname , email to send to other activity.
 
+                        // don't forget to remove this section
+                        Context context = getApplicationContext();
+                        String text = "This user exists in database";
+                        int duration = Toast.LENGTH_SHORT;
                         Toast toast = Toast.makeText(context, text, duration);
                         toast.show();
-                        writeNewUser(userId,firstname,lastname,email);
                     }else{
-                        Context context = getApplicationContext();
-                        String text = "เจอแล้วจ้า";
-                        int duration = Toast.LENGTH_SHORT;
+                        // TODO 3. if userId exist in database - move to add information activity
+                        // this method use to write new user to database in Firebase
 
+                        // don't forget to remove this section
+                        Context context = getApplicationContext();
+                        String text = "Added to the database successfully";
+                        int duration = Toast.LENGTH_SHORT;
                         Toast toast = Toast.makeText(context, text, duration);
                         toast.show();
+
+                        writeNewUser(userId,firstname,lastname,email);
                     }
             }
 
