@@ -69,9 +69,9 @@ public class SignInActivity extends AppCompatActivity implements
         // [START customize_button]
         // ** Optional
         // Set the dimensions of the sign-in button.
-        SignInButton signInButton = findViewById(R.id.sign_in_button);
-        signInButton.setSize(SignInButton.SIZE_STANDARD);
-        signInButton.setColorScheme(SignInButton.COLOR_LIGHT);
+        // SignInButton signInButton = findViewById(R.id.sign_in_button);
+        // signInButton.setSize(SignInButton.SIZE_STANDARD);
+        // signInButton.setColorScheme(SignInButton.COLOR_LIGHT);
         // [END customize_button]
     }
 
@@ -215,9 +215,9 @@ public class SignInActivity extends AppCompatActivity implements
             case R.id.sign_in_button:
                 signIn();
                 break;
-//            case R.id.sign_out_button:
-//                signOut();
-//                break;
+            // case R.id.sign_out_button:
+            //     signOut();
+            //     break;
         }
     }
 }
