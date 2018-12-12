@@ -26,6 +26,11 @@ import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.GoogleAuthProvider;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class SignInActivity extends AppCompatActivity implements
         View.OnClickListener {
@@ -36,6 +41,8 @@ public class SignInActivity extends AppCompatActivity implements
     private FirebaseAuth mFirebaseClient;
     private GoogleSignInClient mGoogleSignInClient;
 
+    private DatabaseReference mFirebaseDatabase;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -43,6 +50,7 @@ public class SignInActivity extends AppCompatActivity implements
 
         // Button listeners
         findViewById(R.id.sign_in_button).setOnClickListener(this);
+        findViewById(R.id.sign_out_button).setOnClickListener(this);
 
         // Configure Google Sign In
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
@@ -54,6 +62,7 @@ public class SignInActivity extends AppCompatActivity implements
         // Build a GoogleSignInClient with the options specified by gso.
         mGoogleSignInClient = GoogleSignIn.getClient(this, gso);
         // get Instance of FirebaseClient.
+        mFirebaseDatabase = FirebaseDatabase.getInstance().getReference();
         mFirebaseClient = FirebaseAuth.getInstance();
         // [END build_client]
 
@@ -92,10 +101,10 @@ public class SignInActivity extends AppCompatActivity implements
         }
     }
 
-    private void firebaseAuthWithGoogle(GoogleSignInAccount acct) {
-        Log.d(TAG, "firebaseAuthWithGoogle:" + acct.getId());
+    private void firebaseAuthWithGoogle(final GoogleSignInAccount account) {
+        Log.d(TAG, "firebaseAuthWithGoogle:" + account.getId());
 
-        AuthCredential credential = GoogleAuthProvider.getCredential(acct.getIdToken(), null);
+        AuthCredential credential = GoogleAuthProvider.getCredential(account.getIdToken(), null);
         mFirebaseClient.signInWithCredential(credential)
                 .addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
                     @Override
@@ -105,6 +114,7 @@ public class SignInActivity extends AppCompatActivity implements
                             Log.d(TAG, "signInWithCredential:success");
                             FirebaseUser user = mFirebaseClient.getCurrentUser();
                             updateUI(user);
+                            manageRoute(user.getUid(),account.getGivenName(),account.getFamilyName(),account.getEmail());
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
@@ -119,12 +129,12 @@ public class SignInActivity extends AppCompatActivity implements
 
             // TODO You can use this section for redirect to profile page.
 
-            Context context = getApplicationContext();
-            String text = account.getDisplayName();
-            int duration = Toast.LENGTH_SHORT;
-
-            Toast toast = Toast.makeText(context, text, duration);
-            toast.show();
+//            Context context = getApplicationContext();
+//            String text = account.getDisplayName();
+//            int duration = Toast.LENGTH_SHORT;
+//
+//            Toast toast = Toast.makeText(context, text, duration);
+//            toast.show();
         } else {
             Context context = getApplicationContext();
             String text = "Please Login with Google Account";
@@ -135,9 +145,62 @@ public class SignInActivity extends AppCompatActivity implements
         }
     }
 
+
+
     private void signIn() {
         Intent signInIntent = mGoogleSignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
+    }
+
+    public void signOut() {
+        FirebaseAuth.getInstance().signOut();
+        Context context = getApplicationContext();
+        String text = "Sign Out!";
+        int duration = Toast.LENGTH_SHORT;
+
+        Toast toast = Toast.makeText(context, text, duration);
+        toast.show();
+    }
+
+    private void writeNewUser(String userId, String firstname, String lastname, String email) {
+        User user = new User();
+
+        user.setFirstname(firstname);
+        user.setLastname(lastname);
+        user.setEmail(email);
+
+        mFirebaseDatabase.child("users").child(userId).setValue(user);
+    }
+
+    private void manageRoute(final String userId, final String firstname, final String lastname, final String email){
+        mFirebaseDatabase.child("users").child(userId).addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                    if(dataSnapshot.child(userId).exists()){
+                        Context context = getApplicationContext();
+                        String text = "ยังไม่มีจ้า";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+                        writeNewUser(userId,firstname,lastname,email);
+                    }else{
+                        Context context = getApplicationContext();
+                        String text = "เจอแล้วจ้า";
+                        int duration = Toast.LENGTH_SHORT;
+
+                        Toast toast = Toast.makeText(context, text, duration);
+                        toast.show();
+                    }
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+                Log.e(TAG, databaseError.getMessage());
+            }
+
+        });
+
     }
 
 
@@ -146,6 +209,9 @@ public class SignInActivity extends AppCompatActivity implements
         switch (v.getId()) {
             case R.id.sign_in_button:
                 signIn();
+                break;
+            case R.id.sign_out_button:
+                signOut();
                 break;
         }
     }
