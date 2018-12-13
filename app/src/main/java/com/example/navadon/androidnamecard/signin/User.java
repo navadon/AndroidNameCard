@@ -9,6 +9,16 @@ public class User {
     private String lastname;
     private String email;
 
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
+    }
+
+    private String imageUrl;
+
     public User() {
         // Default constructor
     }
